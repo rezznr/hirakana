@@ -2,28 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* background: radial-gradient(circle, #ede1d5 28%, #ed7e7e 86%); */
+  background-image: url("@assets/img/background.png");
+  background-size: cover; /* Scale the background image to be as large as possible */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: initial; /* Center the background image */
+  height: 90vh; /* Full viewport height */
+  width: 100%; /* Full width */
 }
 
 @layer utilities {
