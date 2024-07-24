@@ -5,9 +5,9 @@ import { menu } from "./menu.data";
 
 function Menu() {
   return (
-    <div className="flex sm:flex-col lg:flex-row gap-4">
+    <div className="flex sm:flex-col lg:flex-row gap-20">
       {menu.map((item, i) => (
-        <Link className="font-bold" href={item.link} key={i}>
+        <Link className="font-bold font-sans" href={item.link} key={i}>
           <div className="w-[170px] h-[180px] bg-gradient-to-b from-[#fc4774] to-[#dca7a2] rounded-[17px] shadow flex flex-col items-center justify-center hover:scale-105 active:animate-ping">
             <Image
               className="p-5"
@@ -16,9 +16,7 @@ function Menu() {
               width={150}
               height={150}
             />
-            <p className="text-black text-[22px] font-black font-['Poppins']">
-              {item.name}
-            </p>
+            <p className="text-black text-[22px]">{item.name}</p>
           </div>
         </Link>
       ))}
