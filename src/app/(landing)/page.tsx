@@ -12,7 +12,6 @@ export default function Home() {
         </h3>
       </div>
       <Menu />
-
       <div className="flex flex-col gap-5 "></div>
     </main>
   );
