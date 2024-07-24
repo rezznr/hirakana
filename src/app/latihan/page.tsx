@@ -1,4 +1,3 @@
-import React from "react";
 import MenuLatihan from "./_partials/menu-latihan";
 
 function Page() {
