@@ -1,7 +1,7 @@
 const Page = () => {
   return (
     <div>
-      <h1>Belajar</h1>
+      <h1>Hiragana</h1>
     </div>
   );
 };
