@@ -1,17 +1,35 @@
 // src/components/Question.tsx
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface QuestionProps {
   question: string;
   options: string[];
   answer: string;
+  onAnswer: (isCorrect: boolean) => void;
+  reset: boolean;
 }
 
-const Question: React.FC<QuestionProps> = ({ question, options, answer }) => {
+const Question: React.FC<QuestionProps> = ({
+  question,
+  options,
+  answer,
+  onAnswer,
+  reset,
+}) => {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const [hasAnswered, setHasAnswered] = useState(false);
+
+  useEffect(() => {
+    setSelectedOption(null);
+    setHasAnswered(false);
+  }, [reset]);
 
   const handleOptionClick = (option: string) => {
-    setSelectedOption(option);
+    if (!hasAnswered) {
+      setSelectedOption(option);
+      onAnswer(option === answer);
+      setHasAnswered(true);
+    }
   };
 
   return (
@@ -24,7 +42,7 @@ const Question: React.FC<QuestionProps> = ({ question, options, answer }) => {
           </li>
         ))}
       </ul>
-      {selectedOption && (
+      {selectedOption !== null && (
         <p>{selectedOption === answer ? "Correct!" : "Incorrect"}</p>
       )}
     </div>

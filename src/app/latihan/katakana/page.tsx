@@ -4,18 +4,23 @@ import { useState } from "react";
 import Level from "@/components/level/level";
 
 const Home: React.FC = () => {
-  const [completedLevels, setCompletedLevels] = useState<number[]>([]);
+  const [completedLevels, setCompletedLevels] = useState<
+    { level: number; score: number }[]
+  >([]);
   const [selectedLevel, setSelectedLevel] = useState<number | null>(null);
 
   const handleLevelSelect = (level: number) => {
-    if (completedLevels.includes(level - 1) || level === 1) {
+    const previousLevelScore = completedLevels.find(
+      (lvl) => lvl.level === level - 1
+    )?.score;
+    if (level === 1 || (previousLevelScore && previousLevelScore >= 70)) {
       setSelectedLevel(level);
     }
   };
 
-  const handleLevelComplete = () => {
-    if (selectedLevel !== null && !completedLevels.includes(selectedLevel)) {
-      setCompletedLevels([...completedLevels, selectedLevel]);
+  const handleLevelComplete = (score: number) => {
+    if (selectedLevel !== null) {
+      setCompletedLevels([...completedLevels, { level: selectedLevel, score }]);
       setSelectedLevel(null);
     }
   };
@@ -30,7 +35,12 @@ const Home: React.FC = () => {
             {[...Array(10)].map((_, index) => (
               <li key={index} onClick={() => handleLevelSelect(index + 1)}>
                 Level {index + 1}{" "}
-                {completedLevels.includes(index + 1) ? "(Completed)" : ""}
+                {completedLevels.some((lvl) => lvl.level === index + 1)
+                  ? `(Score: ${
+                      completedLevels.find((lvl) => lvl.level === index + 1)
+                        ?.score
+                    }%)`
+                  : ""}
               </li>
             ))}
           </ul>
