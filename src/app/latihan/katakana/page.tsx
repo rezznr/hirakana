@@ -20,7 +20,21 @@ const Home: React.FC = () => {
 
   const handleLevelComplete = (score: number) => {
     if (selectedLevel !== null) {
-      setCompletedLevels([...completedLevels, { level: selectedLevel, score }]);
+      const existingLevelIndex = completedLevels.findIndex(
+        (lvl) => lvl.level === selectedLevel
+      );
+      if (existingLevelIndex !== -1) {
+        // Update existing level score
+        const updatedLevels = [...completedLevels];
+        updatedLevels[existingLevelIndex].score = score;
+        setCompletedLevels(updatedLevels);
+      } else {
+        // Add new level score
+        setCompletedLevels([
+          ...completedLevels,
+          { level: selectedLevel, score },
+        ]);
+      }
       setSelectedLevel(null);
     }
   };
