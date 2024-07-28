@@ -105,17 +105,17 @@ const Latihan: React.FC = () => {
         <div className="flex flex-col gap-5 font-sans items-center justify-center">
           <h3 className="text-2xl">Pilih Level</h3>
           <div className="grid grid-cols-3 gap-5">
-            {[...Array(10)].map((_, index) => (
+            {questionsData.levels.map((lvl) => (
               <button
                 className="border border-purple-950 rounded-lg bg-white text-center"
-                key={index}
-                onClick={() => handleLevelSelect(index + 1)}
+                key={lvl.level}
+                onClick={() => handleLevelSelect(lvl.level)}
               >
                 <p className="text-xl p-5">
-                  Level {index + 1}{" "}
-                  {completedLevels.some((lvl) => lvl.level === index + 1)
+                  Level {lvl.level}{" "}
+                  {completedLevels.some((cl) => cl.level === lvl.level)
                     ? `(Score: ${
-                        completedLevels.find((lvl) => lvl.level === index + 1)
+                        completedLevels.find((cl) => cl.level === lvl.level)
                           ?.score
                       }%)`
                     : ""}

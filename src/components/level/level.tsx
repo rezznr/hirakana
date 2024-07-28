@@ -1,7 +1,8 @@
-// src/components/level/level.tsx
+"use client";
 import { useState } from "react";
+import Question from "@/components/question/question";
 
-interface Question {
+interface QuestionData {
   id: number;
   question: string;
   options: string[];
@@ -10,40 +11,43 @@ interface Question {
 
 interface LevelProps {
   level: number;
-  questions: Question[];
+  questions: QuestionData[];
   onComplete: (score: number) => void;
 }
 
 const Level: React.FC<LevelProps> = ({ level, questions, onComplete }) => {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [score, setScore] = useState(0);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [correctAnswers, setCorrectAnswers] = useState(0);
+  const [isAnswered, setIsAnswered] = useState(false);
+  const [resetQuestion, setResetQuestion] = useState(false);
 
-  const handleAnswer = (answer: string) => {
-    if (questions[currentQuestionIndex].answer === answer) {
-      setScore(score + 1);
+  const handleAnswer = (isCorrect: boolean) => {
+    if (isCorrect) {
+      setCorrectAnswers(correctAnswers + 1);
     }
-    if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    setIsAnswered(true);
+  };
+
+  const handleNextQuestion = () => {
+    setIsAnswered(false);
+    setResetQuestion(!resetQuestion);
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion(currentQuestion + 1);
     } else {
-      onComplete((score / questions.length) * 100);
+      const score = (correctAnswers / questions.length) * 100;
+      onComplete(score);
     }
   };
 
-  if (questions.length === 0) {
-    return <div>No questions available for this level.</div>;
-  }
-
   return (
     <div>
-      <h2>Level {level}</h2>
-      <div>
-        <p>{questions[currentQuestionIndex].question}</p>
-        {questions[currentQuestionIndex].options.map((option, index) => (
-          <button key={index} onClick={() => handleAnswer(option)}>
-            {option}
-          </button>
-        ))}
-      </div>
+      <p>level {level}</p>
+      <Question
+        {...questions[currentQuestion]}
+        onAnswer={handleAnswer}
+        reset={resetQuestion}
+      />
+      {isAnswered && <button onClick={handleNextQuestion}>Next</button>}
     </div>
   );
 };
