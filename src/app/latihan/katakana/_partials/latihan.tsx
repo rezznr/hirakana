@@ -31,6 +31,7 @@ const Latihan: React.FC = () => {
     null
   );
 
+  // Load completed levels from localStorage once when component mounts
   useEffect(() => {
     const savedLevels = localStorage.getItem("completedLevels");
     if (savedLevels) {
@@ -58,8 +59,11 @@ const Latihan: React.FC = () => {
       });
   }, []);
 
+  // Save completed levels to localStorage whenever they change
   useEffect(() => {
-    localStorage.setItem("completedLevels", JSON.stringify(completedLevels));
+    if (completedLevels.length > 0) {
+      localStorage.setItem("completedLevels", JSON.stringify(completedLevels));
+    }
   }, [completedLevels]);
 
   const handleLevelSelect = (level: number) => {
