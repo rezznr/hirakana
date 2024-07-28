@@ -38,7 +38,11 @@ const Latihan: React.FC = () => {
     }
 
     // Fetch questions data from API
-    fetch("/api/questions")
+    fetch("/api/questions", {
+      headers: {
+        "x-api-key": process.env.NEXT_PUBLIC_API_KEY || "",
+      },
+    })
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
