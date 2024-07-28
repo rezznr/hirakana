@@ -31,12 +31,14 @@ const Latihan: React.FC = () => {
     null
   );
 
-  // Load completed levels from localStorage once when component mounts
   useEffect(() => {
-    const savedLevels = localStorage.getItem("completedLevels");
-    if (savedLevels) {
-      setCompletedLevels(JSON.parse(savedLevels));
-    }
+    // Fetch completed levels from API
+    fetch("/api/save-progress")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Loaded completed levels from API:", data);
+        setCompletedLevels(data.completedLevels || []);
+      });
 
     // Fetch questions data from API
     fetch("/api/questions", {
@@ -59,10 +61,20 @@ const Latihan: React.FC = () => {
       });
   }, []);
 
-  // Save completed levels to localStorage whenever they change
   useEffect(() => {
+    // Save completed levels to API whenever they change
     if (completedLevels.length > 0) {
-      localStorage.setItem("completedLevels", JSON.stringify(completedLevels));
+      fetch("/api/save-progress", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ completedLevels }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Progress saved:", data);
+        });
     }
   }, [completedLevels]);
 
