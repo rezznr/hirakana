@@ -1,0 +1,149 @@
+{
+  "levels": [
+    {
+      "level": 1,
+      "questions": [
+        {
+          "question": "Apa arti dari 'こんにちは'?",
+          "options": [
+            "Selamat Pagi",
+            "Selamat Siang",
+            "Selamat Malam",
+            "Terima Kasih"
+          ],
+          "answer": "Selamat Siang"
+        },
+        {
+          "question": "Apa arti dari 'こんにちは'?",
+          "options": [
+            "Selamat Pagi",
+            "Selamat Siang",
+            "Selamat Malam",
+            "Terima Kasih"
+          ],
+          "answer": "Selamat Siang"
+        },
+        {
+          "question": "Bagaimana cara menulis 'terima kasih' dalam bahasa Jepang?",
+          "options": ["ありがとう", "さようなら", "おはよう", "こんばんは"],
+          "answer": "ありがとう"
+        },
+        {
+          "question": "Apa arti dari 'さようなら'?",
+          "options": [
+            "Selamat Tinggal",
+            "Selamat Pagi",
+            "Selamat Malam",
+            "Selamat Siang"
+          ],
+          "answer": "Selamat Tinggal"
+        },
+        {
+          "question": "Bagaimana cara menulis 'selamat malam' dalam bahasa Jepang?",
+          "options": ["こんばんは", "おはよう", "さようなら", "ありがとう"],
+          "answer": "こんばんは"
+        },
+        {
+          "question": "Apa arti dari 'おはよう'?",
+          "options": [
+            "Selamat Pagi",
+            "Selamat Siang",
+            "Selamat Malam",
+            "Terima Kasih"
+          ],
+          "answer": "Selamat Pagi"
+        },
+        {
+          "question": "Bagaimana cara menulis 'terima kasih' dalam bahasa Jepang?",
+          "options": ["ありがとう", "さようなら", "おはよう", "こんばんは"],
+          "answer": "ありがとう"
+        },
+        {
+          "question": "Apa arti dari 'さようなら'?",
+          "options": [
+            "Selamat Tinggal",
+            "Selamat Pagi",
+            "Selamat Malam",
+            "Selamat Siang"
+          ],
+          "answer": "Selamat Tinggal"
+        },
+        {
+          "question": "Bagaimana cara menulis 'selamat malam' dalam bahasa Jepang?",
+          "options": ["こんばんは", "おはよう", "さようなら", "ありがとう"],
+          "answer": "こんばんは"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "questions": [
+        {
+          "question": "Apa arti dari 'ありがとう'?",
+          "options": ["Selamat Tinggal", "Maaf", "Terima Kasih", "Sama-sama"],
+          "answer": "Terima Kasih"
+        },
+        {
+          "question": "Apa arti dari 'こんにちは'?",
+          "options": [
+            "Selamat Pagi",
+            "Selamat Siang",
+            "Selamat Malam",
+            "Terima Kasih"
+          ],
+          "answer": "Selamat Siang"
+        },
+        {
+          "question": "Bagaimana cara menulis 'terima kasih' dalam bahasa Jepang?",
+          "options": ["ありがとう", "さようなら", "おはよう", "こんばんは"],
+          "answer": "ありがとう"
+        },
+        {
+          "question": "Apa arti dari 'さようなら'?",
+          "options": [
+            "Selamat Tinggal",
+            "Selamat Pagi",
+            "Selamat Malam",
+            "Selamat Siang"
+          ],
+          "answer": "Selamat Tinggal"
+        },
+        {
+          "question": "Bagaimana cara menulis 'selamat malam' dalam bahasa Jepang?",
+          "options": ["こんばんは", "おはよう", "さようなら", "ありがとう"],
+          "answer": "こんばんは"
+        },
+        {
+          "question": "Apa arti dari 'おはよう'?",
+          "options": [
+            "Selamat Pagi",
+            "Selamat Siang",
+            "Selamat Malam",
+            "Terima Kasih"
+          ],
+          "answer": "Selamat Pagi"
+        },
+        {
+          "question": "Bagaimana cara menulis 'terima kasih' dalam bahasa Jepang?",
+          "options": ["ありがとう", "さようなら", "おはよう", "こんばんは"],
+          "answer": "ありがとう"
+        },
+        {
+          "question": "Apa arti dari 'さようなら'?",
+          "options": [
+            "Selamat Tinggal",
+            "Selamat Pagi",
+            "Selamat Malam",
+            "Selamat Siang"
+          ],
+          "answer": "Selamat Tinggal"
+        },
+        {
+          "question": "Bagaimana cara menulis 'selamat malam' dalam bahasa Jepang?",
+          "options": ["こんばんは", "おはよう", "さようなら", "ありがとう"],
+          "answer": "こんばんは"
+        }
+      ]
+    }
+  ]
+}
