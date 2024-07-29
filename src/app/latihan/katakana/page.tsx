@@ -1,4 +1,4 @@
-import { Latihan } from "./_partials/latihan";
+import Latihan from "./_partials/latihan";
 
 function Page() {
   return (

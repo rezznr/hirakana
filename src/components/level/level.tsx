@@ -1,19 +1,24 @@
-// src/components/Level.tsx
+"use client";
 import { useState } from "react";
 import Question from "@/components/question/question";
-import questions from "@/data/latihan/hiragana/question.json";
+
+interface QuestionData {
+  id: number;
+  question: string;
+  options: string[];
+  answer: string;
+}
 
 interface LevelProps {
   level: number;
+  questions: QuestionData[];
   onComplete: (score: number) => void;
 }
 
-const Level: React.FC<LevelProps> = ({ level, onComplete }) => {
+const Level: React.FC<LevelProps> = ({ level, questions, onComplete }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [isAnswered, setIsAnswered] = useState(false);
-  const levelQuestions =
-    questions.levels.find((lvl) => lvl.level === level)?.questions || [];
   const [resetQuestion, setResetQuestion] = useState(false);
 
   const handleAnswer = (isCorrect: boolean) => {
@@ -26,18 +31,19 @@ const Level: React.FC<LevelProps> = ({ level, onComplete }) => {
   const handleNextQuestion = () => {
     setIsAnswered(false);
     setResetQuestion(!resetQuestion);
-    if (currentQuestion < levelQuestions.length - 1) {
+    if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
-      const score = (correctAnswers / levelQuestions.length) * 100;
+      const score = (correctAnswers / questions.length) * 100;
       onComplete(score);
     }
   };
 
   return (
     <div>
+      <p>level {level}</p>
       <Question
-        {...levelQuestions[currentQuestion]}
+        {...questions[currentQuestion]}
         onAnswer={handleAnswer}
         reset={resetQuestion}
       />
