@@ -21,6 +21,21 @@ const LevelPage = ({ level }: { level: string }) => {
   const router = useRouter();
 
   useEffect(() => {
+    // Check if user has access to the requested level
+    const completedLevels = JSON.parse(
+      localStorage.getItem("completedLevels") || "[]"
+    );
+    const levelInt = parseInt(level as string);
+    const previousLevelScore = completedLevels.find(
+      (lvl: { level: number; score: number }) => lvl.level === levelInt - 1
+    )?.score;
+
+    if (levelInt !== 1 && (!previousLevelScore || previousLevelScore < 70)) {
+      // If the user does not have access, redirect to latihan/hiragana
+      router.back();
+      return;
+    }
+
     if (level) {
       fetch(`/api/questions`, {
         headers: {
@@ -31,7 +46,7 @@ const LevelPage = ({ level }: { level: string }) => {
         .then((data) => {
           // Find the questions for the specific level
           const levelData = data.levels.find(
-            (lvl: LevelData) => lvl.level === parseInt(level as string)
+            (lvl: LevelData) => lvl.level === levelInt
           );
           if (levelData) {
             setQuestions(levelData.questions);
@@ -45,10 +60,8 @@ const LevelPage = ({ level }: { level: string }) => {
           setLoading(false);
         });
     }
-  }, [level]);
-
-  const handleLevelComplete = (completedLevel: number, score: number) => {
-    // Update the local storage with the completed level and score
+  }, [level, router]);
+  const completed = (completedLevel: number, score: number) => {
     const completedLevels = JSON.parse(
       localStorage.getItem("completedLevels") || "[]"
     );
@@ -64,9 +77,7 @@ const LevelPage = ({ level }: { level: string }) => {
       updatedLevels.push({ level: completedLevel, score });
     }
     localStorage.setItem("completedLevels", JSON.stringify(updatedLevels));
-
-    // Navigate back to the latihan page
-    router.push("/latihan/hiragana");
+    router.back();
   };
 
   if (loading) return <div>Loading...</div>;
@@ -76,7 +87,7 @@ const LevelPage = ({ level }: { level: string }) => {
       <Level
         questions={questions}
         level={parseInt(level as string)}
-        onComplete={handleLevelComplete}
+        onComplete={completed}
       />
     </div>
   );
