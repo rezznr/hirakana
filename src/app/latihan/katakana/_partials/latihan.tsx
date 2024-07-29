@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Level from "@/components/level/level";
 
 interface CompletedLevel {
   level: number;
@@ -24,14 +23,14 @@ interface QuestionsData {
   levels: LevelData[];
 }
 
-const Latihan: React.FC = () => {
+const Latihan: React.FC<{ onSelectLevel: (level: number) => void }> = ({
+  onSelectLevel,
+}) => {
   const [completedLevels, setCompletedLevels] = useState<CompletedLevel[]>([]);
-  const [selectedLevel, setSelectedLevel] = useState<number | null>(null);
   const [questionsData, setQuestionsData] = useState<QuestionsData | null>(
     null
   );
 
-  // Load completed levels from localStorage once when component mounts
   useEffect(() => {
     const savedLevels = localStorage.getItem("completedLevels");
     if (savedLevels) {
@@ -51,15 +50,14 @@ const Latihan: React.FC = () => {
         return response.json();
       })
       .then((data) => {
-        console.log("Data fetched from API:", data); // Logging for debugging
+        console.log("Data fetched from API:", data);
         setQuestionsData(data);
       })
       .catch((error) => {
-        console.error("Error fetching data:", error); // Logging for debugging
+        console.error("Error fetching data:", error);
       });
   }, []);
 
-  // Save completed levels to localStorage whenever they change
   useEffect(() => {
     if (completedLevels.length > 0) {
       localStorage.setItem("completedLevels", JSON.stringify(completedLevels));
@@ -71,29 +69,20 @@ const Latihan: React.FC = () => {
       (lvl) => lvl.level === level - 1
     )?.score;
     if (level === 1 || (previousLevelScore && previousLevelScore >= 70)) {
-      setSelectedLevel(level);
+      onSelectLevel(level);
     }
   };
 
-  const handleLevelComplete = (score: number) => {
-    if (selectedLevel !== null) {
-      const existingLevelIndex = completedLevels.findIndex(
-        (lvl) => lvl.level === selectedLevel
+  const handleLevelComplete = (level: number, score: number) => {
+    setCompletedLevels((prev) => {
+      const updatedLevels = prev.map((lvl) =>
+        lvl.level === level ? { level, score } : lvl
       );
-      if (existingLevelIndex !== -1) {
-        // Update existing level score
-        const updatedLevels = [...completedLevels];
-        updatedLevels[existingLevelIndex].score = score;
-        setCompletedLevels(updatedLevels);
-      } else {
-        // Add new level score
-        setCompletedLevels([
-          ...completedLevels,
-          { level: selectedLevel, score },
-        ]);
+      if (!updatedLevels.find((lvl) => lvl.level === level)) {
+        updatedLevels.push({ level, score });
       }
-      setSelectedLevel(null);
-    }
+      return updatedLevels;
+    });
   };
 
   if (!questionsData) {
@@ -105,41 +94,30 @@ const Latihan: React.FC = () => {
       <h2 className="text-black text-[33px] font-extrabold">
         Latihan Huruf Katakana
       </h2>
-      {selectedLevel === null ? (
-        <div className="flex flex-col gap-5 font-sans items-center justify-center">
-          <h3 className="text-2xl">Pilih Level</h3>
-          <div className="grid grid-cols-3 gap-5">
-            {questionsData.levels.map((lvl) => (
-              <button
-                className="border border-purple-950 rounded-lg bg-white text-center"
-                key={lvl.level}
-                onClick={() => handleLevelSelect(lvl.level)}
-              >
-                <p className="text-xl p-5">
-                  Level {lvl.level}{" "}
-                  {completedLevels.some((cl) => cl.level === lvl.level)
-                    ? `(Score: ${
-                        completedLevels.find((cl) => cl.level === lvl.level)
-                          ?.score
-                      }%)`
-                    : ""}
-                </p>
-              </button>
-            ))}
-          </div>
+      <div className="flex flex-col gap-5 font-sans items-center justify-center">
+        <h3 className="text-2xl">Pilih Level</h3>
+        <div className="grid grid-cols-3 gap-5">
+          {questionsData.levels.map((lvl) => (
+            <button
+              className="border border-purple-950 rounded-lg bg-white text-center"
+              key={lvl.level}
+              onClick={() => handleLevelSelect(lvl.level)}
+            >
+              <p className="text-xl p-5">
+                Level {lvl.level}{" "}
+                {completedLevels.some((cl) => cl.level === lvl.level)
+                  ? `(Score: ${
+                      completedLevels.find((cl) => cl.level === lvl.level)
+                        ?.score
+                    }%)`
+                  : ""}
+              </p>
+            </button>
+          ))}
         </div>
-      ) : (
-        <Level
-          level={selectedLevel}
-          questions={
-            questionsData.levels.find((lvl) => lvl.level === selectedLevel)
-              ?.questions || []
-          }
-          onComplete={handleLevelComplete}
-        />
-      )}
+      </div>
     </div>
   );
 };
 
-export default Latihan;
+export { Latihan };

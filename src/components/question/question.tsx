@@ -36,7 +36,7 @@ const Question: React.FC<QuestionProps> = ({
     <div>
       <h2>{question}</h2>
       <ul>
-        {options.map((option) => (
+        {options?.map((option) => (
           <li key={option} onClick={() => handleOptionClick(option)}>
             {option}
           </li>
