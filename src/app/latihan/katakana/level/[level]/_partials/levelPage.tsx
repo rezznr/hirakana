@@ -18,6 +18,7 @@ interface LevelData {
 const LevelPage = ({ level }: { level: string }) => {
   const [questions, setQuestions] = useState<QuestionData[]>([]);
   const [loading, setLoading] = useState(true);
+  const [accessDenied, setAccessDenied] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -31,8 +32,9 @@ const LevelPage = ({ level }: { level: string }) => {
     )?.score;
 
     if (levelInt !== 1 && (!previousLevelScore || previousLevelScore < 70)) {
-      // If the user does not have access, redirect to latihan/hiragana
-      router.back();
+      // If the user does not have access, display access denied message
+      setAccessDenied(true);
+      setLoading(false);
       return;
     }
 
@@ -61,6 +63,7 @@ const LevelPage = ({ level }: { level: string }) => {
         });
     }
   }, [level, router]);
+
   const completed = (completedLevel: number, score: number) => {
     const completedLevels = JSON.parse(
       localStorage.getItem("completedLevels") || "[]"
@@ -81,6 +84,17 @@ const LevelPage = ({ level }: { level: string }) => {
   };
 
   if (loading) return <div>Loading...</div>;
+
+  if (accessDenied)
+    return (
+      <div>
+        <p>
+          Anda belum menyelesaikan level sebelumnya. Selesaikan level sebelumnya
+          untuk mengakses level ini.
+        </p>
+        <button onClick={() => router.back()}>Kembali</button>
+      </div>
+    );
 
   return (
     <div>
