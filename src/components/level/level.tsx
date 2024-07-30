@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Question from "@/components/question/question";
 
 interface QuestionData {
@@ -12,7 +13,7 @@ interface QuestionData {
 interface LevelProps {
   level: number;
   questions: QuestionData[];
-  onComplete: (score: number) => void;
+  onComplete: (level: number, score: number) => void;
 }
 
 const Level: React.FC<LevelProps> = ({ level, questions, onComplete }) => {
@@ -20,6 +21,7 @@ const Level: React.FC<LevelProps> = ({ level, questions, onComplete }) => {
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [isAnswered, setIsAnswered] = useState(false);
   const [resetQuestion, setResetQuestion] = useState(false);
+  const router = useRouter();
 
   const handleAnswer = (isCorrect: boolean) => {
     if (isCorrect) {
@@ -34,20 +36,30 @@ const Level: React.FC<LevelProps> = ({ level, questions, onComplete }) => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
+      // Calculate the score
       const score = (correctAnswers / questions.length) * 100;
-      onComplete(score);
+      // Log the score for the level
+      console.log(`Score for level ${level}: ${score}%`);
+      // Call the onComplete function
+      onComplete(level, score);
+      // Redirect to the level selection page
+      router.back();
     }
   };
 
   return (
     <div>
-      <p>level {level}</p>
+      <p>Level {level}</p>
       <Question
         {...questions[currentQuestion]}
         onAnswer={handleAnswer}
         reset={resetQuestion}
       />
-      {isAnswered && <button onClick={handleNextQuestion}>Next</button>}
+      {isAnswered && (
+        <button onClick={handleNextQuestion}>
+          {currentQuestion < questions.length - 1 ? "Next" : "Done"}
+        </button>
+      )}
     </div>
   );
 };
