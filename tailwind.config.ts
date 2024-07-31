@@ -9,12 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "radial-gradient": "radial-gradient(circle, #FFDECF 0%, #FFEEEE 100%)",
+        "radial-gradient-100":
+          "radial-gradient(circle, #FFDECF 0%, #96FFA0 100%)",
+        "radial-gradient-90":
+          "radial-gradient(circle, #FFDECF 0%, #C4FF96 100%)",
+        "radial-gradient-80":
+          "radial-gradient(circle, #FFDECF 0%, #FFE896 100%)",
+        "radial-gradient-70":
+          "radial-gradient(circle, #FFDECF 0%, #FFC896 100%)",
+        "radial-gradient-60":
+          "radial-gradient(circle, #FFDECF 0%, #FF9696 100%)",
+        "radial-gradient-0":
+          "radial-gradient(circle, #E5E2E1 0%, #8B8B8B 100%)",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        pottaOne: ["Potta One", "cursive"],
       },
     },
   },

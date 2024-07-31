@@ -5,7 +5,7 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <nav className="px-[20vh] pt-10 absolute">
+    <nav className="fixed px-[20vh] pt-10">
       <Link href="/">
         <Image width={150} src={logo} alt="nav-logo" />
       </Link>

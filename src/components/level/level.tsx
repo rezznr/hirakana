@@ -42,12 +42,11 @@ const Level: React.FC<LevelProps> = ({ level, questions, onComplete }) => {
       console.log(`Score for level ${level}: ${score}%`);
       // Call the onComplete function
       onComplete(level, score);
-      // Redirect to the level selection page
     }
   };
 
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center">
       <p>Level {level}</p>
       <Question
         {...questions[currentQuestion]}

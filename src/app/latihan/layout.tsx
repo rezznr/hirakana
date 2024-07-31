@@ -5,7 +5,9 @@ function Layout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <div>{children}</div>;
+  return (
+    <div className="flex justify-center items-center pt-9">{children}</div>
+  );
 }
 
 export default Layout;
