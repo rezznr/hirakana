@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins, Potta_One } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 
 const poppins = Poppins({ weight: ["300", "400"], subsets: ["latin"] });
+const pottaOne = Potta_One({ weight: ["400"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className="" lang="id">
-      <body className={poppins.className}>
+      <body className={poppins.className || pottaOne.className}>
         <Navbar />
         <div className="flex min-h-screen justify-center items-center">
           {children}
