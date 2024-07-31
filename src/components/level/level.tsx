@@ -43,7 +43,6 @@ const Level: React.FC<LevelProps> = ({ level, questions, onComplete }) => {
       // Call the onComplete function
       onComplete(level, score);
       // Redirect to the level selection page
-      router.back();
     }
   };
 
