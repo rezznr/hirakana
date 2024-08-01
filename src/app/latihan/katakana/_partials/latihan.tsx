@@ -64,20 +64,51 @@ const Latihan: React.FC<{ onSelectLevel: (level: number) => void }> = ({
     }
   }, [completedLevels]);
 
+  // const handleLevelSelect = (level: number) => {
+  //   const previousLevelScore = completedLevels.find(
+  //     (lvl) => lvl.level === level - 1
+  //   )?.score;
+  //   if (level === 1 || (previousLevelScore && previousLevelScore >= 70)) {
+  //     onSelectLevel(level);
+  //   }
+  // };
   const handleLevelSelect = (level: number) => {
-    const previousLevelScore = completedLevels.find(
+    // Cek apakah level pertama
+    if (level === 1) {
+      onSelectLevel(level);
+      return;
+    }
+
+    // Cek apakah level sebelumnya telah diselesaikan dengan nilai >= 70 atau telah diselesaikan sebelumnya
+    const previousLevel = completedLevels.find(
       (lvl) => lvl.level === level - 1
-    )?.score;
-    if (level === 1 || (previousLevelScore && previousLevelScore >= 70)) {
+    );
+    const currentLevel = completedLevels.find((lvl) => lvl.level === level);
+
+    if ((previousLevel && previousLevel.score >= 70) || currentLevel) {
       onSelectLevel(level);
     }
   };
 
   const canSelectLevel = (lvl: LevelData) => {
-    const previousLevelScore = completedLevels.find(
+    // Level pertama selalu dapat diakses
+    if (lvl.level === 1) {
+      return true;
+    }
+    // Cek apakah level sebelumnya sudah pernah dikerjakan
+    const previousLevel = completedLevels.find(
       (completedLevel) => completedLevel.level === lvl.level - 1
-    )?.score;
-    return lvl.level === 1 || (previousLevelScore && previousLevelScore >= 70);
+    );
+    // Jika level sebelumnya pernah dikerjakan dan nilainya >= 70, maka level ini dapat diakses
+    if (previousLevel && previousLevel.score >= 70) {
+      return true;
+    }
+    // Cek apakah level ini sendiri sudah pernah dikerjakan (untuk kasus seperti level 2 diakses setelah level 3 selesai)
+    const currentLevel = completedLevels.find(
+      (completedLevel) => completedLevel.level === lvl.level
+    );
+
+    return currentLevel !== undefined;
   };
 
   const getBackgroundClass = (level: number) => {

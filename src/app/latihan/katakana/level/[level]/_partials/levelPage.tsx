@@ -22,16 +22,34 @@ const LevelPage = ({ level }: { level: string }) => {
   const router = useRouter();
 
   useEffect(() => {
-    // Check if user has access to the requested level
-    const completedLevels = JSON.parse(
-      localStorage.getItem("completedLevels") || "[]"
-    );
-    const levelInt = parseInt(level as string);
-    const previousLevelScore = completedLevels.find(
-      (lvl: { level: number; score: number }) => lvl.level === levelInt - 1
-    )?.score;
+    const checkAccess = () => {
+      const completedLevels = JSON.parse(
+        localStorage.getItem("completedLevels") || "[]"
+      );
+      const levelInt = parseInt(level as string);
 
-    if (levelInt !== 1 && (!previousLevelScore || previousLevelScore < 70)) {
+      if (levelInt === 1) {
+        // Level pertama selalu bisa diakses
+        return true;
+      }
+
+      // Cek apakah level sebelumnya telah diselesaikan dengan nilai >= 70 atau telah diselesaikan sebelumnya
+      const previousLevel = completedLevels.find(
+        (lvl: { level: number; score: number }) => lvl.level === levelInt - 1
+      );
+
+      const currentLevel = completedLevels.find(
+        (lvl: { level: number; score: number }) => lvl.level === levelInt
+      );
+
+      if ((previousLevel && previousLevel.score >= 70) || currentLevel) {
+        return true;
+      }
+
+      return false;
+    };
+
+    if (!checkAccess()) {
       // If the user does not have access, display access denied message
       setAccessDenied(true);
       setLoading(false);
@@ -48,7 +66,7 @@ const LevelPage = ({ level }: { level: string }) => {
         .then((data) => {
           // Find the questions for the specific level
           const levelData = data.levels.find(
-            (lvl: LevelData) => lvl.level === levelInt
+            (lvl: LevelData) => lvl.level === parseInt(level as string)
           );
           if (levelData) {
             setQuestions(levelData.questions);
@@ -97,13 +115,13 @@ const LevelPage = ({ level }: { level: string }) => {
     );
 
   return (
-    <div>
+    <>
       <Level
         questions={questions}
         level={parseInt(level as string)}
         onComplete={completed}
       />
-    </div>
+    </>
   );
 };
 

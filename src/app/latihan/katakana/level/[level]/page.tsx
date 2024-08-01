@@ -1,7 +1,8 @@
 import { LevelPage } from "./_partials/levelPage";
 
 export const metadata = {
-  title: "Detail Pembayaran",
+  title: "Level 1",
+  // buat jadi dynamic
 };
 
 type Params = {

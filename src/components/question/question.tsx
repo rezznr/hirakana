@@ -33,18 +33,31 @@ const Question: React.FC<QuestionProps> = ({
   };
 
   return (
-    <div>
-      <h2>{question}</h2>
-      <ul>
-        {options?.map((option) => (
-          <li key={option} onClick={() => handleOptionClick(option)}>
-            {option}
-          </li>
-        ))}
-      </ul>
-      {selectedOption !== null && (
+    <div className="flex flex-col gap-5 font-poppins">
+      <div className="flex justify-center items-center bg-[#fffdfc] rounded-[17px] shadow py-5 px-10">
+        <h2 className="text-2xl font-bold">{question}</h2>
+      </div>
+      <div className="grid grid-cols-2 gap-5">
+        {options?.map((option) => {
+          let buttonClass =
+            "bg-white p-5 rounded-xl uppercase font-bold hover:text-black hover:bg-gray/75 hover:scale-105 transform transition";
+          if (selectedOption === option) {
+            buttonClass += option === answer ? " bg-green-500" : " bg-red-500";
+          }
+          return (
+            <button
+              className={buttonClass}
+              key={option}
+              onClick={() => handleOptionClick(option)}
+            >
+              {option}
+            </button>
+          );
+        })}
+      </div>
+      {/* {selectedOption !== null && (
         <p>{selectedOption === answer ? "Correct!" : "Incorrect"}</p>
-      )}
+      )} */}
     </div>
   );
 };
