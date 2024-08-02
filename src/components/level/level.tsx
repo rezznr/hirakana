@@ -50,8 +50,8 @@ const Level: React.FC<LevelProps> = ({ level, questions, onComplete }) => {
   const buttonText = isLastQuestion ? "Done" : "Next";
   const ButtonIcon = isLastQuestion ? MdDone : GrLinkNext;
   const buttonClass = isLastQuestion
-    ? "bg-[#7DFF17] hover:bg-[#7DFF17]/80"
-    : "bg-[#FFE27D] hover:bg-[#FFE27D]/80";
+    ? "bg-gradient-to-b from-[#7dff17] to-[#b6fb80] hover:bg-[#7DFF17]/80"
+    : "bg-gradient-to-b from-[#FF9696] to-[#DAE2FE] hover:bg-[#FF9696]/80";
 
   return (
     <div className="flex flex-col items-center justify-center gap-5">
@@ -66,7 +66,7 @@ const Level: React.FC<LevelProps> = ({ level, questions, onComplete }) => {
       />
       {isAnswered && (
         <button
-          className={`font-bold text-xl py-3 px-10 rounded-xl flex flex-row items-center justify-center gap-3 ${buttonClass}`}
+          className={`font-bold text-2xl py-3 px-20 rounded-3xl flex flex-row items-center justify-center gap-3 transform transition duration-300 hover:scale-105 active:scale-110 font-pottaOne ${buttonClass}`}
           onClick={handleNextQuestion}
         >
           {buttonText}

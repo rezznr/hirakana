@@ -8,7 +8,7 @@ export const metadata = {
 const LatihanPage = () => {
   return (
     <>
-      <Latihan />;
+      <Latihan />
     </>
   );
 };

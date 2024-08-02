@@ -40,13 +40,17 @@ const Question: React.FC<QuestionProps> = ({
       <div className="grid grid-cols-2 gap-5">
         {options?.map((option) => {
           let buttonClass =
-            "p-5 rounded-xl uppercase font-bold transform transition ";
+            "p-5 rounded-xl uppercase font-bold transform transition duration-300 ";
+
           if (selectedOption === option) {
-            buttonClass += option === answer ? " bg-green-500" : " bg-red-500";
+            // Determine if the selected option is correct or not
+            buttonClass +=
+              option === answer ? "animated-bg-green" : "animated-bg-red";
           } else {
             buttonClass +=
-              "bg-white hover:text-black hover:bg-gray/75 hover:scale-105";
+              "bg-white active:scale-100 hover:bg-gray-200/90 hover:scale-105";
           }
+
           return (
             <button
               className={buttonClass}
@@ -58,6 +62,7 @@ const Question: React.FC<QuestionProps> = ({
           );
         })}
       </div>
+
       {/* {selectedOption !== null && (
         <p>{selectedOption === answer ? "Correct!" : "Incorrect"}</p>
       )} */}

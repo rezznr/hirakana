@@ -8,7 +8,7 @@ function MenuLatihan() {
     <div className="flex sm:flex-col lg:flex-row gap-4">
       {menu.map((item, i) => (
         <Link className="font-bold" href={item.link} key={i}>
-          <div className="w-[170px] h-[180px] bg-gradient-to-b from-[#fc4774] to-[#dca7a2] rounded-[17px] shadow flex flex-col items-center justify-center hover:scale-105 active:animate-ping">
+          <div className="w-[170px] h-[180px] bg-gradient-to-b from-[#fc4774] to-[#dca7a2] rounded-[17px] shadow flex flex-col items-center justify-center hover:scale-110 active:scale-100 transition-transform">
             <Image
               className="p-5"
               src={item.icon}

@@ -1,5 +1,6 @@
 "use client";
 
+import Loading from "@/app/loading";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { IoArrowBackSharp } from "react-icons/io5";
@@ -142,28 +143,28 @@ const Latihan: React.FC<{}> = () => {
   };
 
   if (!questionsData) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   return (
-    <div className="relative flex flex-col justify-center items-center font-sans">
+    <div className="relative flex flex-col justify-center items-center font-poppins">
       <div className="flex flex-col items-center gap-3">
         <h2 className="text-black text-[33px] font-extrabold italic">
           Latihan Huruf Katakana
         </h2>
         <div className="w-[222px] h-[45px] bg-gradient-to-r from-[#ffe6df] to-[#ff9595] rounded-tl-[11px] rounded-tr-[11px] flex items-center justify-center">
-          <h3 className="text-3xl text-center font-extrabold font-sans">
+          <h3 className="text-3xl text-center font-extrabold font-poppins">
             Pilih Level
           </h3>
-          <div
-            onClick={() => router.back()}
-            className="bg-gradient-to-r from-slate-100 to to-blue-400 p-2 rounded-xl relative right-[35vh] cursor-pointer hover:scale-105 active:scale-100"
-          >
-            <IoArrowBackSharp className="text-2xl " />
-          </div>
+        </div>
+        <div
+          onClick={() => router.back()}
+          className="bg-gradient-to-r from-slate-100 to to-blue-400 p-2 rounded-xl relative right-[30vh] cursor-pointer hover:scale-105 active:scale-100"
+        >
+          <IoArrowBackSharp className="text-2xl " />
         </div>
       </div>
-      <div className="flex font-sans items-center justify-center w-[40%]">
+      <div className="flex font-poppins items-center justify-center w-[40%]">
         <div className="flex flex-wrap gap-5 justify-center p-10">
           {questionsData.levels.map((lvl) => (
             <button
