@@ -13,7 +13,7 @@ const config: Config = {
         "radial-gradient-100":
           "radial-gradient(circle, #FEFDFD 12%, #96FFA0 100%)",
         "radial-gradient-90":
-          "radial-gradient(circle, #FEFDFD 12%, #C4FF96 100%)",
+          "radial-gradient(circle, #FEFDFD 1%, #C4FF96 100%)",
         "radial-gradient-80":
           "radial-gradient(circle, #FEFDFD 12%, #FFE896 100%)",
         "radial-gradient-70":
