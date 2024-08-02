@@ -1,17 +1,16 @@
-// app/latihan/hiragana/page.tsx
-"use client";
-
-import { useRouter } from "next/navigation";
 import { Latihan } from "./_partials/latihan";
 
+const pathName = "Katakana";
+export const metadata = {
+  title: `Latihan | ${pathName}`,
+};
+
 const LatihanPage = () => {
-  const router = useRouter();
-
-  const handleSelectLevel = (level: number) => {
-    router.push(`/latihan/katakana/level/${level}`);
-  };
-
-  return <Latihan onSelectLevel={handleSelectLevel} />;
+  return (
+    <>
+      <Latihan />;
+    </>
+  );
 };
 
 export default LatihanPage;

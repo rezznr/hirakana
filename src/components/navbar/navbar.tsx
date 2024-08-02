@@ -5,9 +5,9 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <nav className="fixed px-[20vh] pt-10">
+    <nav className="relative px-[20vh] pt-10">
       <Link href="/">
-        <Image width={150} src={logo} alt="nav-logo" />
+        <Image className="" width={150} src={logo} alt="nav-logo" />
       </Link>
     </nav>
   );

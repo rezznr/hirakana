@@ -40,9 +40,12 @@ const Question: React.FC<QuestionProps> = ({
       <div className="grid grid-cols-2 gap-5">
         {options?.map((option) => {
           let buttonClass =
-            "bg-white p-5 rounded-xl uppercase font-bold hover:text-black hover:bg-gray/75 hover:scale-105 transform transition";
+            "p-5 rounded-xl uppercase font-bold transform transition ";
           if (selectedOption === option) {
             buttonClass += option === answer ? " bg-green-500" : " bg-red-500";
+          } else {
+            buttonClass +=
+              "bg-white hover:text-black hover:bg-gray/75 hover:scale-105";
           }
           return (
             <button

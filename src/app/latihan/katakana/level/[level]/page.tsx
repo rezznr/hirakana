@@ -1,9 +1,13 @@
 import { LevelPage } from "./_partials/levelPage";
 
-export const metadata = {
-  title: "Level 1",
-  // buat jadi dynamic
-};
+export async function generateMetadata({ params: { level } }: Params) {
+  return {
+    title: `Latihan | Level ${level}`,
+    description: `This is Level ${level} of Latihan Japanese.`,
+    keywords: `level, ${level}, hiragana, katakana, japanese`,
+    author: "RezaNR",
+  };
+}
 
 type Params = {
   params: {

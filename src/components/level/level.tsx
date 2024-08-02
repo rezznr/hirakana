@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import Question from "@/components/question/question";
 import { GrLinkNext } from "react-icons/gr";
 import { MdDone } from "react-icons/md";
@@ -23,7 +23,7 @@ const Level: React.FC<LevelProps> = ({ level, questions, onComplete }) => {
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [isAnswered, setIsAnswered] = useState(false);
   const [resetQuestion, setResetQuestion] = useState(false);
-  const router = useRouter();
+  // const router = useRouter();
 
   const handleAnswer = (isCorrect: boolean) => {
     if (isCorrect) {
