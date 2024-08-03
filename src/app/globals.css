@@ -41,7 +41,7 @@ body {
 /* Custom keyframes for the background color transition */
 @keyframes bgColorTransitionGreen {
   0% {
-    background-color: #ffffff;
+    background-color: #ff7e9e;
   }
   100% {
     background-color: #22c55e;
@@ -51,7 +51,7 @@ body {
 
 @keyframes bgColorTransitionRed {
   0% {
-    background-color: #ffffff;
+    background-color: #ff7e9e;
   }
   100% {
     color: #f1f1f1;
