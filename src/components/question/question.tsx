@@ -34,13 +34,13 @@ const Question: React.FC<QuestionProps> = ({
 
   return (
     <div className="flex flex-col gap-5 font-poppins">
-      <div className="flex justify-center items-center bg-[#fffdfc] rounded-[17px] shadow py-5 px-10">
-        <h2 className="text-2xl font-bold">{question}</h2>
+      <div className="flex justify-center items-center rounded shadow-xl py-5 px-10 bg-gradient-to-tr from-[#fffdfc] to-[#e1f7fd]">
+        <h2 className="text-2xl font-bold text-[#FC4774]">{question}</h2>
       </div>
       <div className="grid grid-cols-2 gap-5">
         {options?.map((option) => {
           let buttonClass =
-            "p-5 rounded-xl uppercase font-bold transform transition duration-300 ";
+            "p-5 rounded-xl uppercase font-extrabold transform transition duration-300 ";
 
           if (selectedOption === option) {
             // Determine if the selected option is correct or not
@@ -48,7 +48,7 @@ const Question: React.FC<QuestionProps> = ({
               option === answer ? "animated-bg-green" : "animated-bg-red";
           } else {
             buttonClass +=
-              "bg-white active:scale-100 hover:bg-gray-200/90 hover:scale-105";
+              "bg-gradient-to-br from-[#ff7e9e] to-[#ffc2d1] active:scale-100 hover:bg-[#ff7e9e]/90 hover:scale-105";
           }
 
           return (

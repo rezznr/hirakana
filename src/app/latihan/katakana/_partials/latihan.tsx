@@ -173,7 +173,7 @@ const Latihan: React.FC<{}> = () => {
                   ? `${getBackgroundClass(
                       lvl.level
                     )} hover:scale-110 active:scale-100`
-                  : "bg-[#BBB8B6] cursor-not-allowed"
+                  : "bg-radial-gradient-0 cursor-not-allowed"
               }`}
               key={lvl.level}
               onClick={() => handleLevelSelect(lvl.level)}
