@@ -158,7 +158,7 @@ const Latihan: React.FC<{}> = () => {
           </h3>
         </div>
         <div
-          onClick={() => router.back()}
+          onClick={() => router.push("/latihan")}
           className="bg-gradient-to-r from-slate-100 to to-blue-400 p-2 rounded-xl relative right-[30vh] cursor-pointer hover:scale-105 active:scale-100"
         >
           <IoArrowBackSharp className="text-2xl " />
