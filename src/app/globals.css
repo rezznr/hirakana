@@ -12,3 +12,77 @@ body {
   height: 90vh; /* Full viewport height */
   width: 100%; /* Full width */
 }
+
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 1px; /* Width of the scrollbar */
+  height: 1px; /* Height of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffcfcf; /* Color of the scrollbar thumb */
+  border-radius: 1px; /* Rounded corners for the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffb2b2; /* Color when hovered */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; /* Makes the scrollbar thin */
+  scrollbar-color: #ff9696 #f1f1f1; /* Thumb and track color */
+}
+
+/* Custom keyframes for the background color transition */
+@keyframes bgColorTransitionGreen {
+  0% {
+    background-color: #ffffff;
+  }
+  100% {
+    background-color: #22c55e;
+    color: #f1f1f1;
+  } /* green-500 */
+}
+
+@keyframes bgColorTransitionRed {
+  0% {
+    background-color: #ffffff;
+  }
+  100% {
+    color: #f1f1f1;
+    background-color: #b91c1c;
+  } /* red-700 */
+}
+
+.animated-bg-green {
+  animation: bgColorTransitionGreen 0.5s forwards;
+}
+
+.animated-bg-red {
+  animation: bgColorTransitionRed 0.5s forwards;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.bouncing-element {
+  animation: bounce 2s infinite;
+}
