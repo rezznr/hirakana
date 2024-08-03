@@ -98,7 +98,7 @@ const LevelPage = ({ level }: { level: string }) => {
       updatedLevels.push({ level: completedLevel, score });
     }
     localStorage.setItem("completedLevels", JSON.stringify(updatedLevels));
-    router.back();
+    router.push(`/latihan/katakana/level/${level}/hasil`);
   };
 
   if (loading) return <div>Loading...</div>;
