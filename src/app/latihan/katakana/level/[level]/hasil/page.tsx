@@ -8,7 +8,7 @@ type Params = {
 
 function Page({ params: { level } }: Params) {
   return (
-    <div>
+    <div className="">
       <ResultPage level={level} />
     </div>
   );

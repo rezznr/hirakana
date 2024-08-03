@@ -50,14 +50,15 @@ const Level: React.FC<LevelProps> = ({ level, questions, onComplete }) => {
   const buttonText = isLastQuestion ? "Done" : "Next";
   const ButtonIcon = isLastQuestion ? MdDone : GrLinkNext;
   const buttonClass = isLastQuestion
-    ? "bg-gradient-to-b from-[#7dff17] to-[#b6fb80] hover:bg-[#7DFF17]/80"
-    : "bg-gradient-to-b from-[#FF9696] to-[#DAE2FE] hover:bg-[#FF9696]/80";
+    ? "bg-gradient-to-b from-[#B3FF77] to-[#FFC3C3] hover:bg-[#7DFF17]/80"
+    : "bg-gradient-to-b from-[#FFB5B5] to-[#EDE1D5] hover:bg-[#FF9696]/80";
 
   return (
-    <div className="flex flex-col items-center justify-center gap-5">
-      <div className="font-sans shadow-lg bg-[#ff9595] py-5 px-10 flex flex-col items-center rounded-tl-[11px] rounded-tr-[11px]">
-        <h2 className="text-3xl font-extrabold italic">Hiragana</h2>
-        <p className="text-2xl font-extrabold underline">Level {level}</p>
+    <div className="flex flex-col items-center justify-center gap-10">
+      <div className="font-sans shadow-lg bg-gradient-to-b from-[#FF9696] to-[#FFD3D3] py-5 px-16 flex flex-col items-center rounded-tl-[11px] rounded-tr-[11px]">
+        <h2 className="text-3xl text-[#251C1C] font-extrabold ">
+          Level {level}
+        </h2>
       </div>
       <Question
         {...questions[currentQuestion]}
