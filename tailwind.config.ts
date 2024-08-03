@@ -21,7 +21,7 @@ const config: Config = {
         "radial-gradient-60":
           "radial-gradient(circle, #FEFDFD 12%, #FF9696 100%)",
         "radial-gradient-0":
-          "radial-gradient(circle, #E5E2E1 12%, #8B8B8B 100%)",
+          "radial-gradient(circle, rgba(229, 226, 225, var(--tw-bg-opacity, 0.8)) 12%, rgba(139, 139, 139, var(--tw-bg-opacity, 0.8)) 100%)",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
