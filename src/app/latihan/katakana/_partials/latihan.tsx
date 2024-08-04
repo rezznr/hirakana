@@ -178,7 +178,7 @@ const Latihan: React.FC = () => {
   // Render main content
   return (
     <div className="relative flex flex-col justify-center items-center font-poppins px-4 md:px-8 lg:px-16">
-      <div className="flex flex-col items-center gap-3 text-center">
+      <div className="flex flex-col items-center gap-2 text-center">
         <h2 className="text-2xl md:text-3xl lg:text-4xl text-black font-extrabold italic">
           Latihan Huruf Katakana
         </h2>
@@ -194,7 +194,7 @@ const Latihan: React.FC = () => {
           <IoArrowBackSharp className="text-xl md:text-2xl" />
         </div>
       </div>
-      <div className="flex items-center justify-center mt-8 w-full">
+      <div className="flex items-center justify-center mt-5 w-full md:mt-0">
         <div className="flex flex-wrap gap-5 justify-center p-4 md:p-6 lg:p-10 max-w-full">
           {questionsData?.levels.map((lvl) => (
             <button
@@ -210,7 +210,7 @@ const Latihan: React.FC = () => {
               disabled={!canSelectLevel(lvl)}
             >
               <div className="p-4">
-                <p className="text-black text-lg md:text-xl lg:text-[22px] font-bold font-pottaOne">
+                <p className="text-black text-lg md:text-xl lg:text-[22px] font-bold ">
                   LEVEL {lvl.level}
                 </p>
                 <p

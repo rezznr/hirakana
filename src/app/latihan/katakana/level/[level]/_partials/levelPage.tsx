@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import Level from "@/components/level/level";
@@ -111,6 +110,8 @@ const LevelPage = ({ level }: { level: string }) => {
       }
 
       localStorage.setItem("completedLevels", JSON.stringify(updatedLevels));
+
+      // Immediately navigate to the results page
       router.push(`/latihan/katakana/level/${level}/hasil`);
     },
     [level, router]

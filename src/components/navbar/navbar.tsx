@@ -5,8 +5,8 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <nav className="relative top-0 left-0 w-full z-50 ">
-      <div className="flex items-center justify-between px-4 md:px-16 lg:px-20 py-4">
+    <nav className="relative top-0 left-0 w-full z-50">
+      <div className="flex items-center justify-between px-4 md:px-16 lg:px-32 py-10">
         <Link href="/">
           <Image
             className="h-auto"

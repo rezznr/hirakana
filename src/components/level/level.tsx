@@ -2,7 +2,9 @@
 import { useState, useCallback } from "react";
 import Question from "@/components/question/question";
 import { GrLinkNext } from "react-icons/gr";
-import { MdDone } from "react-icons/md";
+import { MdDone, MdGridOn } from "react-icons/md";
+import { useRouter } from "next/navigation";
+import Loading from "@/app/loading";
 
 // Define the QuestionData interface
 interface QuestionData {
@@ -25,6 +27,25 @@ const Level: React.FC<LevelProps> = ({ level, questions, onComplete }) => {
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [isAnswered, setIsAnswered] = useState(false);
   const [resetQuestion, setResetQuestion] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [showLoading, setShowLoading] = useState(false); // New loading state
+  const router = useRouter();
+
+  // Function to open the confirmation modal
+  const handleButtonClick = () => {
+    setShowModal(true);
+  };
+
+  // Function to confirm and redirect to the menu
+  const handleConfirm = () => {
+    setShowModal(false);
+    router.push("/latihan/katakana");
+  };
+
+  // Function to close the confirmation modal
+  const handleClose = () => {
+    setShowModal(false);
+  };
 
   // Handle answer selection
   const handleAnswer = useCallback(
@@ -45,14 +66,14 @@ const Level: React.FC<LevelProps> = ({ level, questions, onComplete }) => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion((prev) => prev + 1);
     } else {
+      // Display loading state
+      setShowLoading(true);
+
       // Calculate the score
       const score = (correctAnswers / questions.length) * 100;
 
-      // Call the onComplete function
+      // Call the onComplete function and immediately navigate to the results page
       onComplete(level, score);
-
-      // Hide the question immediately after completion
-      setCurrentQuestion(questions.length); // Move past the last question
     }
   }, [
     currentQuestion,
@@ -74,27 +95,78 @@ const Level: React.FC<LevelProps> = ({ level, questions, onComplete }) => {
     : "bg-gradient-to-b from-[#FFB5B5] to-[#EDE1D5] hover:bg-[#FF9696]/80";
 
   return (
-    <div className="flex flex-col items-center justify-center gap-10">
+    <div className="flex flex-col items-center justify-center gap-5">
       <div className="font-sans shadow-lg bg-gradient-to-b from-[#FF9696] to-[#FFD3D3] py-5 px-16 flex flex-col items-center rounded-tl-[11px] rounded-tr-[11px]">
         <h2 className="text-3xl text-[#251C1C] font-extrabold ">
           Level {level}
         </h2>
       </div>
-      {currentQuestion < questions.length && (
-        <Question
-          {...questions[currentQuestion]}
-          onAnswer={handleAnswer}
-          reset={resetQuestion}
-        />
+
+      {/* Display loading if showLoading is true */}
+      {showLoading ? (
+        <Loading message="Menghitung Nilai, Mohon Tunggu sebentar" />
+      ) : (
+        <>
+          {currentQuestion < questions.length && (
+            <Question
+              {...questions[currentQuestion]}
+              onAnswer={handleAnswer}
+              reset={resetQuestion}
+            />
+          )}
+          {isAnswered && (
+            <button
+              className={`font-bold text-2xl py-3 px-20 rounded-3xl flex flex-row items-center justify-center gap-3 hover:scale-105 active:scale-95 transform transition duration-300 font-poppins ${buttonClass}`}
+              onClick={handleNextQuestion}
+            >
+              {buttonText}
+              <ButtonIcon className="inline-block ml-2" />
+            </button>
+          )}
+        </>
       )}
-      {isAnswered && (
+      <div className="fixed group bottom-6 md:bottom-24">
         <button
-          className={`font-bold text-2xl py-3 px-20 rounded-3xl flex flex-row items-center justify-center gap-3 hover:scale-105 active:scale-95 transform transition duration-300 font-pottaOne ${buttonClass}`}
-          onClick={handleNextQuestion}
+          className="flex items-center bg-[#F94C76]/30 rounded-xl hover:bg-[#F94C76]/50 hover:scale-105 active:scale-100 transform transition duration-300 py-5 px-4 font-extrabold font-poppins"
+          onClick={handleButtonClick}
         >
-          {buttonText}
-          <ButtonIcon className="inline-block ml-2" />
+          <MdGridOn className="inline-block text-xl md:text-2xl" />
         </button>
+        <div className="absolute bottom-auto mb-2 hidden group-hover:flex justify-center items-center transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+          <span className="bg-red-300 text-white text-sm rounded-xl py-1 px-2 shadow-lg whitespace-nowrap">
+            Kembali ke menu Level
+          </span>
+        </div>
+      </div>
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl p-6 shadow-lg max-w-sm relative">
+            <button
+              className="absolute text-xl top-1 right-5 text-gray-500 hover:text-gray-700"
+              onClick={handleClose}
+            >
+              &times;
+            </button>
+            <h3 className="text-lg font-bold mb-4">
+              Apakah Kamu yakin ingin kembali ke menu?
+            </h3>
+            <p className="mb-6">Jawaban akan direset.</p>
+            <div className="flex justify-end space-x-4">
+              <button
+                className="bg-red-300 px-4 font-bold py-2 rounded hover:bg-red-200"
+                onClick={handleConfirm}
+              >
+                Ya, Kembali
+              </button>
+              <button
+                className="bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400"
+                onClick={handleClose}
+              >
+                Batal
+              </button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
