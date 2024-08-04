@@ -19,10 +19,11 @@ interface LevelProps {
   level: number;
   questions: QuestionData[];
   onComplete: (level: number, score: number) => void;
+  url: string;
 }
 
 // Main component
-const Level: React.FC<LevelProps> = ({ level, questions, onComplete }) => {
+const Level: React.FC<LevelProps> = ({ level, questions, onComplete, url }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [isAnswered, setIsAnswered] = useState(false);
@@ -39,7 +40,7 @@ const Level: React.FC<LevelProps> = ({ level, questions, onComplete }) => {
   // Function to confirm and redirect to the menu
   const handleConfirm = () => {
     setShowModal(false);
-    router.push("/latihan/katakana");
+    router.push(url);
   };
 
   // Function to close the confirmation modal

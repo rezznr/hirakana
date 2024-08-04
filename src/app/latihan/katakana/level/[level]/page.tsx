@@ -1,3 +1,4 @@
+import { apiURL, url } from "../../page";
 import { LevelPage } from "./_partials/levelPage";
 
 export async function generateMetadata({ params: { level } }: Params) {
@@ -18,7 +19,7 @@ type Params = {
 function page({ params: { level } }: Params) {
   return (
     <>
-      <LevelPage level={level} />
+      <LevelPage apiURL={apiURL} url={url} level={level} />
     </>
   );
 }

@@ -10,7 +10,7 @@ interface CompletedLevel {
   score: number;
 }
 
-const ResultPage = ({ level }: { level: string }) => {
+const ResultPage = ({ level, url }: { level: string; url: string }) => {
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
   const [currentLevel, setCurrentLevel] = useState<CompletedLevel | null>(null);
@@ -50,12 +50,12 @@ const ResultPage = ({ level }: { level: string }) => {
   const handleRetry = () => {
     // Redirect to the current level for retry
     if (currentLevel) {
-      router.push(`/latihan/katakana/level/${currentLevel.level}`);
+      router.push(`${url}/level/${currentLevel.level}`);
     }
   };
   const handleBacktoLevelMenu = () => {
     // Redirect to the level menu
-    router.push(`/latihan/katakana/`);
+    router.push(url);
   };
 
   const handleContinue = () => {
@@ -63,9 +63,9 @@ const ResultPage = ({ level }: { level: string }) => {
     if (currentLevel) {
       if (currentLevel.level === 10) {
         // If the current level is the last level, redirect to the home page
-        router.push("/latihan/katakana");
+        router.push(url);
       } else {
-        router.push(`/latihan/katakana/level/${currentLevel.level + 1}`);
+        router.push(`${url}/level/${currentLevel.level + 1}`);
       }
     }
   };

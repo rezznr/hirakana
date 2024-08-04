@@ -1,3 +1,4 @@
+import { url } from "../../../page";
 import ResultPage from "./_partials/result";
 
 type Params = {
@@ -9,7 +10,7 @@ type Params = {
 function Page({ params: { level } }: Params) {
   return (
     <div>
-      <ResultPage level={level} />
+      <ResultPage url={url} level={level} />
     </div>
   );
 }

@@ -28,7 +28,15 @@ interface QuestionsData {
 }
 
 // Main component
-const Latihan: React.FC = () => {
+const Latihan = ({
+  apiURL,
+  pathName,
+  url,
+}: {
+  apiURL: string;
+  pathName: string;
+  url: string;
+}) => {
   const [completedLevels, setCompletedLevels] = useState<CompletedLevel[]>([]);
   const [questionsData, setQuestionsData] = useState<QuestionsData | null>(
     null
@@ -40,7 +48,7 @@ const Latihan: React.FC = () => {
   // Fetch questions data from API
   const fetchQuestionsData = useCallback(async () => {
     try {
-      const response = await fetch("/api/questions", {
+      const response = await fetch(apiURL, {
         headers: {
           "x-api-key": process.env.NEXT_PUBLIC_API_KEY || "",
         },
@@ -53,12 +61,12 @@ const Latihan: React.FC = () => {
       const data: QuestionsData = await response.json();
       setQuestionsData(data);
     } catch (error) {
-      console.error("Error fetching data:", error);
-      setError("Failed to load questions data.");
+      console.error("Ada Error nih ngambil datanya:", error);
+      setError("Gagal ngambil datanya nih, coba lagi nanti deh.");
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [apiURL]);
 
   useEffect(() => {
     // Fetch completed levels from local storage
@@ -79,9 +87,9 @@ const Latihan: React.FC = () => {
   // Handle level selection
   const handleSelectLevel = useCallback(
     (level: number) => {
-      router.push(`/latihan/katakana/level/${level}`);
+      router.push(`${url}/level/${level}`);
     },
-    [router]
+    [router, url]
   );
 
   const handleLevelSelect = useCallback(
@@ -169,8 +177,12 @@ const Latihan: React.FC = () => {
   // Render error state
   if (error) {
     return (
-      <div className="flex items-center justify-center h-screen">
-        <p className="text-red-500">{error}</p>
+      <div className="relative flex flex-col justify-center items-center font-poppins px-4 md:px-8 lg:px-16 w-[70%]">
+        <div className="flex flex-col items-center gap-2 bg-white rounded-xl text-center px-5 py-7">
+          <p className="text-2xl md:text-3xl lg:text-4xl text-red-400 font-extrabold italic">
+            {error}
+          </p>
+        </div>
       </div>
     );
   }
@@ -180,7 +192,7 @@ const Latihan: React.FC = () => {
     <div className="relative flex flex-col justify-center items-center font-poppins px-4 md:px-8 lg:px-16">
       <div className="flex flex-col items-center gap-2 text-center">
         <h2 className="text-2xl md:text-3xl lg:text-4xl text-black font-extrabold italic">
-          Latihan Huruf Katakana
+          Latihan Huruf {pathName}
         </h2>
         <div className="bg-gradient-to-r from-[#ffe6df] to-[#ff9595] rounded-tl-[11px] rounded-tr-[11px] flex items-center justify-center w-full max-w-[222px] h-[45px]">
           <h3 className="text-xl md:text-2xl lg:text-3xl font-extrabold">

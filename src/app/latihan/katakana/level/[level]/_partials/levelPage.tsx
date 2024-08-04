@@ -18,7 +18,15 @@ interface LevelData {
 }
 
 // Main component
-const LevelPage = ({ level }: { level: string }) => {
+const LevelPage = ({
+  level,
+  apiURL,
+  url,
+}: {
+  level: string;
+  apiURL: string;
+  url: string;
+}) => {
   const [questions, setQuestions] = useState<QuestionData[]>([]);
   const [loading, setLoading] = useState(true);
   const [accessDenied, setAccessDenied] = useState(false);
@@ -27,7 +35,7 @@ const LevelPage = ({ level }: { level: string }) => {
   // Fetch questions for the level
   const fetchQuestions = useCallback(async () => {
     try {
-      const response = await fetch(`/api/questions`, {
+      const response = await fetch(apiURL, {
         headers: {
           "x-api-key": process.env.NEXT_PUBLIC_API_KEY || "",
         },
@@ -53,7 +61,7 @@ const LevelPage = ({ level }: { level: string }) => {
     } finally {
       setLoading(false);
     }
-  }, [level]);
+  }, [level, apiURL]);
 
   // Check access to the level
   const checkAccess = useCallback(() => {
@@ -112,9 +120,9 @@ const LevelPage = ({ level }: { level: string }) => {
       localStorage.setItem("completedLevels", JSON.stringify(updatedLevels));
 
       // Immediately navigate to the results page
-      router.push(`/latihan/katakana/level/${level}/hasil`);
+      router.push(`${url}/level/${level}/hasil`);
     },
-    [level, router]
+    [level, router, url]
   );
 
   // Render loading state
@@ -132,7 +140,7 @@ const LevelPage = ({ level }: { level: string }) => {
         </p>
         <button
           className="font-bold text-2xl py-3 px-10 rounded-xl flex flex-row items-center justify-center gap-3 transform transition duration-300 hover:scale-105 active:scale-110 font-pottaOne bg-gradient-to-b from-[#ffdf2d] to-[#e7e688] hover:bg-[#7DFF17]/80"
-          onClick={() => router.push("/latihan/katakana")}
+          onClick={() => router.push(url)}
         >
           Kembali
         </button>
@@ -144,6 +152,7 @@ const LevelPage = ({ level }: { level: string }) => {
   return (
     <>
       <Level
+        url={url}
         questions={questions}
         level={parseInt(level, 10)}
         onComplete={completed}
