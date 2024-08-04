@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { MdSkipNext, MdOutlineLoop, MdGridOn } from "react-icons/md";
+import Loading from "@/app/loading";
 
 interface CompletedLevel {
   level: number;
@@ -67,58 +68,63 @@ const ResultPage = ({ level }: { level: string }) => {
     }
   };
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <Loading />;
 
   return (
-    <div className="flex flex-col items-center justify-center relative font-poppins">
-      <div className="absolute flex items-center justify-center w-[141px] h-[54px] bg-[#ffb2b2] rounded-[9px] -top-4 z-10">
-        <h2 className="text-4xl font-extrabold text-white py-5">Hasil</h2>
+    <div className="flex flex-col items-center justify-center relative font-poppins px-4 md:px-0">
+      <div className="absolute flex items-center justify-center w-[120px] md:w-[141px] h-[54px] bg-[#ffb2b2] rounded-[9px] -top-4 z-10">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-white py-3">
+          Hasil
+        </h2>
       </div>
 
       {currentLevel ? (
-        <div className="flex flex-col items-center justify-center gap-5 font-poppins w-[400px] h-[200px] md:w-[629px] md:h-[344px] relative bg-[#ff4d4d]/10 rounded-2xl mt-8">
-          <h2 className="text-3xl font-extrabold">
+        <div className="flex flex-col items-center justify-center gap-5 w-full max-w-[629px] h-[344px] bg-[#ff4d4d]/10 rounded-2xl mt-8 p-4">
+          <h2 className="text-2xl md:text-3xl font-extrabold">
             Level {currentLevel.level}
           </h2>
-          <h3 className="text-3xl font-extrabold">
+          <h3 className="text-2xl md:text-3xl font-extrabold">
             SCORE: {Math.floor(currentLevel.score)}%
           </h3>
-          <p className="text-3xl font-extrabold">{message}</p>
-          <div className="flex justify-center items-center mt-10 gap-10">
+          <p className="text-xl md:text-3xl text-center font-extrabold">
+            {message}
+          </p>
+          <div className="flex justify-center items-center mt-8 gap-5 md:gap-10">
             <div>
               <button className={buttonMenu} onClick={handleBacktoLevelMenu}>
-                <MdGridOn className="inline-block text-4xl" />
+                <MdGridOn className="inline-block text-3xl md:text-4xl" />
                 <p>Level</p>
               </button>
             </div>
             <div>
               <button className={buttonMenu} onClick={handleRetry}>
-                <MdOutlineLoop className="inline-block text-4xl" />
+                <MdOutlineLoop className="inline-block text-3xl md:text-4xl" />
                 <p>Retry</p>
               </button>
             </div>
-            {currentLevel.score >= 70 && currentLevel.level !== 10 ? (
+            {currentLevel.score >= 70 && currentLevel.level !== 10 && (
               <div>
                 <button className={buttonMenu} onClick={handleContinue}>
-                  <MdSkipNext className="inline-block text-4xl" />
-                  <p className="">Next</p>
+                  <MdSkipNext className="inline-block text-3xl md:text-4xl" />
+                  <p>Next</p>
                 </button>
               </div>
-            ) : null}
+            )}
           </div>
         </div>
       ) : (
-        <div className="flex flex-col items-center justify-center gap-5 font-poppins w-[400px] h-[200px] md:w-[629px] md:h-[344px] relative bg-[#ff4d4d]/10 rounded-2xl mt-8 ">
-          <div className="flex flex-col items-center justify-center gap-5 max-w-xl">
-            <p className="text-2xl font-extrabold text-center">
+        <div className="flex flex-col items-center justify-center gap-5 w-full max-w-[400px] h-[200px] md:max-w-[629px] md:h-[344px] relative bg-[#ff4d4d]/10 rounded-2xl mt-8 p-4">
+          <div className="flex flex-col items-center justify-center gap-3 md:gap-5 max-w-xl">
+            <p className="text-xl md:text-2xl font-extrabold text-center">
               Level {level} belum diselesaikan atau tidak ditemukan.
             </p>
-            <p className="text-xl font-bold text-center">
+            <p className="text-lg md:text-xl font-bold text-center">
               Selesaikan Level yang tersedia terlebih dahulu
             </p>
             <div>
               <button className={buttonMenu} onClick={handleBacktoLevelMenu}>
-                <MdGridOn className="inline-block text-4xl" />
+                <MdGridOn className="inline-block text-3xl md:text-4xl" />
+                <p>Level</p>
               </button>
             </div>
           </div>

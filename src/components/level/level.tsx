@@ -1,10 +1,10 @@
 "use client";
-import { useState } from "react";
-// import { useRouter } from "next/navigation";
+import { useState, useCallback } from "react";
 import Question from "@/components/question/question";
 import { GrLinkNext } from "react-icons/gr";
 import { MdDone } from "react-icons/md";
 
+// Define the QuestionData interface
 interface QuestionData {
   id: number;
   question: string;
@@ -12,41 +12,61 @@ interface QuestionData {
   answer: string;
 }
 
+// Define the LevelProps interface
 interface LevelProps {
   level: number;
   questions: QuestionData[];
   onComplete: (level: number, score: number) => void;
 }
 
+// Main component
 const Level: React.FC<LevelProps> = ({ level, questions, onComplete }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [isAnswered, setIsAnswered] = useState(false);
   const [resetQuestion, setResetQuestion] = useState(false);
-  // const router = useRouter();
 
-  const handleAnswer = (isCorrect: boolean) => {
-    if (isCorrect) {
-      setCorrectAnswers(correctAnswers + 1);
-    }
-    setIsAnswered(true);
-  };
+  // Handle answer selection
+  const handleAnswer = useCallback(
+    (isCorrect: boolean) => {
+      if (isCorrect) {
+        setCorrectAnswers((prev) => prev + 1);
+      }
+      setIsAnswered(true);
+    },
+    [setCorrectAnswers]
+  );
 
-  const handleNextQuestion = () => {
+  // Handle transition to the next question or completion
+  const handleNextQuestion = useCallback(() => {
     setIsAnswered(false);
     setResetQuestion(!resetQuestion);
+
     if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
+      setCurrentQuestion((prev) => prev + 1);
     } else {
       // Calculate the score
       const score = (correctAnswers / questions.length) * 100;
-      // Log the score for the level
-      console.log(`Score for level ${level}: ${score}%`);
+
       // Call the onComplete function
       onComplete(level, score);
+
+      // Hide the question immediately after completion
+      setCurrentQuestion(questions.length); // Move past the last question
     }
-  };
+  }, [
+    currentQuestion,
+    questions.length,
+    correctAnswers,
+    level,
+    onComplete,
+    resetQuestion,
+  ]);
+
+  // Determine if the current question is the last one
   const isLastQuestion = currentQuestion >= questions.length - 1;
+
+  // Set button text and styling based on the question state
   const buttonText = isLastQuestion ? "Done" : "Next";
   const ButtonIcon = isLastQuestion ? MdDone : GrLinkNext;
   const buttonClass = isLastQuestion
@@ -60,14 +80,16 @@ const Level: React.FC<LevelProps> = ({ level, questions, onComplete }) => {
           Level {level}
         </h2>
       </div>
-      <Question
-        {...questions[currentQuestion]}
-        onAnswer={handleAnswer}
-        reset={resetQuestion}
-      />
+      {currentQuestion < questions.length && (
+        <Question
+          {...questions[currentQuestion]}
+          onAnswer={handleAnswer}
+          reset={resetQuestion}
+        />
+      )}
       {isAnswered && (
         <button
-          className={`font-bold text-2xl py-3 px-20 rounded-3xl flex flex-row items-center justify-center gap-3 transform transition duration-300 hover:scale-105 active:scale-110 font-pottaOne ${buttonClass}`}
+          className={`font-bold text-2xl py-3 px-20 rounded-3xl flex flex-row items-center justify-center gap-3 hover:scale-105 active:scale-95 transform transition duration-300 font-pottaOne ${buttonClass}`}
           onClick={handleNextQuestion}
         >
           {buttonText}

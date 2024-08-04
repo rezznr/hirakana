@@ -131,7 +131,7 @@ const LevelPage = ({ level }: { level: string }) => {
         </p>
         <button
           className="font-bold text-2xl py-3 px-10 rounded-xl flex flex-row items-center justify-center gap-3 transform transition duration-300 hover:scale-105 active:scale-110 font-pottaOne bg-gradient-to-b from-[#ffdf2d] to-[#e7e688] hover:bg-[#7DFF17]/80"
-          onClick={() => router.back()}
+          onClick={() => router.push("/latihan/katakana")}
         >
           Kembali
         </button>

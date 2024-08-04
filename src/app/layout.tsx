@@ -21,7 +21,7 @@ export default function RootLayout({
     <html className="" lang="id">
       <body className={poppins.className || pottaOne.className}>
         <Navbar />
-        <div className="flex items-center justify-center pt-20">{children}</div>
+        <div className="flex items-center justify-center py-20">{children}</div>
       </body>
     </html>
   );
