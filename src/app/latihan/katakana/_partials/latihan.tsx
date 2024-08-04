@@ -163,7 +163,7 @@ const Latihan: React.FC = () => {
 
   // Render loading state
   if (loading) {
-    return <Loading message="Mengambil data soal. Mohon tunggu sebentar..." />;
+    return <Loading message="Mengambil data Level. Mohon tunggu sebentar..." />;
   }
 
   // Render error state
@@ -177,32 +177,32 @@ const Latihan: React.FC = () => {
 
   // Render main content
   return (
-    <div className="relative flex flex-col justify-center items-center font-poppins">
-      <div className="flex flex-col items-center gap-3">
-        <h2 className="text-black text-[33px] font-extrabold italic">
+    <div className="relative flex flex-col justify-center items-center font-poppins px-4 md:px-8 lg:px-16">
+      <div className="flex flex-col items-center gap-3 text-center">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl text-black font-extrabold italic">
           Latihan Huruf Katakana
         </h2>
-        <div className="w-[222px] h-[45px] bg-gradient-to-r from-[#ffe6df] to-[#ff9595] rounded-tl-[11px] rounded-tr-[11px] flex items-center justify-center">
-          <h3 className="text-3xl text-center font-extrabold font-poppins">
+        <div className="bg-gradient-to-r from-[#ffe6df] to-[#ff9595] rounded-tl-[11px] rounded-tr-[11px] flex items-center justify-center w-full max-w-[222px] h-[45px]">
+          <h3 className="text-xl md:text-2xl lg:text-3xl font-extrabold">
             Pilih Level
           </h3>
         </div>
         <div
           onClick={() => router.push("/latihan")}
-          className="bg-gradient-to-r from-slate-100 to-blue-400 transform transition-colors px-4 py-2 rounded-xl relative right-[55vh] cursor-pointer hover:scale-105 active:scale-100"
+          className="bg-gradient-to-r from-slate-100 to-blue-400 transform transition-colors px-4 py-2 rounded-xl cursor-pointer hover:scale-105 active:scale-95 mt-4"
         >
-          <IoArrowBackSharp className="text-2xl " />
+          <IoArrowBackSharp className="text-xl md:text-2xl" />
         </div>
       </div>
-      <div className="flex font-poppins items-center justify-center">
-        <div className="flex flex-wrap gap-5 justify-center p-10">
+      <div className="flex items-center justify-center mt-8 w-full">
+        <div className="flex flex-wrap gap-5 justify-center p-4 md:p-6 lg:p-10 max-w-full">
           {questionsData?.levels.map((lvl) => (
             <button
-              className={`flex justify-center transition-transform shadow-xl items-center rounded-[17px] text-center w-[80%] lg:w-[27%] md:w-[33%] ${
+              className={`flex justify-center items-center transition-transform shadow-xl rounded-[17px] text-center w-full max-w-[300px] md:max-w-[250px] lg:max-w-[200px] ${
                 canSelectLevel(lvl)
                   ? `${getBackgroundClass(
                       lvl.level
-                    )} hover:scale-110 active:scale-100`
+                    )} hover:scale-110 active:scale-95`
                   : "bg-radial-gradient-0 cursor-not-allowed"
               }`}
               key={lvl.level}
@@ -210,11 +210,11 @@ const Latihan: React.FC = () => {
               disabled={!canSelectLevel(lvl)}
             >
               <div className="p-4">
-                <p className="text-black text-[22px] font-bold font-pottaOne">
+                <p className="text-black text-lg md:text-xl lg:text-[22px] font-bold font-pottaOne">
                   LEVEL {lvl.level}
                 </p>
                 <p
-                  className={`font-poppins font-bold text-xl ${getTextColor(
+                  className={`font-poppins font-bold text-base md:text-lg lg:text-xl ${getTextColor(
                     lvl.level
                   )}`}
                 >

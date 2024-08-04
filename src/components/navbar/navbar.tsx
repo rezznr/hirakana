@@ -5,10 +5,29 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <nav className="relative px-[20vh] pt-10">
-      <Link href="/">
-        <Image className="" width={150} src={logo} alt="nav-logo" />
-      </Link>
+    <nav className="relative top-0 left-0 w-full z-50 ">
+      <div className="flex items-center justify-between px-4 md:px-16 lg:px-20 py-4">
+        <Link href="/">
+          <Image
+            className="h-auto"
+            width={150}
+            height={50}
+            src={logo}
+            alt="nav-logo"
+          />
+        </Link>
+        {/* <div className="hidden md:flex items-center space-x-8">
+          <Link href="/about" className="text-gray-800 hover:text-gray-600">
+            About
+          </Link>
+          <Link href="/services" className="text-gray-800 hover:text-gray-600">
+            Services
+          </Link>
+          <Link href="/contact" className="text-gray-800 hover:text-gray-600">
+            Contact
+          </Link>
+        </div> */}
+      </div>
     </nav>
   );
 }

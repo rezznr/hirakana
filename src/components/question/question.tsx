@@ -1,5 +1,4 @@
-// src/components/Question.tsx
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 interface QuestionProps {
   question: string;
@@ -17,20 +16,22 @@ const Question: React.FC<QuestionProps> = ({
   reset,
 }) => {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
-  const [hasAnswered, setHasAnswered] = useState(false);
 
+  // Reset selected option when the `reset` prop changes
   useEffect(() => {
     setSelectedOption(null);
-    setHasAnswered(false);
   }, [reset]);
 
-  const handleOptionClick = (option: string) => {
-    if (!hasAnswered) {
-      setSelectedOption(option);
-      onAnswer(option === answer);
-      setHasAnswered(true);
-    }
-  };
+  // Handle option click
+  const handleOptionClick = useCallback(
+    (option: string) => {
+      if (selectedOption === null) {
+        setSelectedOption(option);
+        onAnswer(option === answer);
+      }
+    },
+    [selectedOption, answer, onAnswer]
+  );
 
   return (
     <div className="flex flex-col gap-5 font-poppins">
@@ -38,17 +39,20 @@ const Question: React.FC<QuestionProps> = ({
         <h2 className="text-2xl font-bold text-[#FC4774]">{question}</h2>
       </div>
       <div className="grid grid-cols-2 gap-5">
-        {options?.map((option) => {
+        {options.map((option) => {
+          // Determine button styling based on the selected option and correctness
+          const isSelected = selectedOption === option;
+          const isCorrect = option === answer;
           let buttonClass =
             "p-5 rounded-xl uppercase font-extrabold transform transition duration-300 ";
 
-          if (selectedOption === option) {
-            // Determine if the selected option is correct or not
-            buttonClass +=
-              option === answer ? "animated-bg-green" : "animated-bg-red";
+          if (isSelected) {
+            buttonClass += isCorrect
+              ? "bg-gradient-to-br from-green-500 to-green-400 scale-95 md:scale-100"
+              : "bg-gradient-to-br from-red-500 to-red-400 scale-95 md:scale-100";
           } else {
             buttonClass +=
-              "bg-gradient-to-br from-[#ff7e9e] to-[#ffc2d1] active:scale-100 hover:bg-[#ff7e9e]/90 hover:scale-105";
+              "bg-gradient-to-br from-[#ff7e9e] to-[#ffc2d1] hover:scale-105 active:scale-100 hover:bg-[#ff7e9e]/90";
           }
 
           return (
@@ -56,16 +60,13 @@ const Question: React.FC<QuestionProps> = ({
               className={buttonClass}
               key={option}
               onClick={() => handleOptionClick(option)}
+              disabled={selectedOption !== null} // Disable button after selection
             >
               {option}
             </button>
           );
         })}
       </div>
-
-      {/* {selectedOption !== null && (
-        <p>{selectedOption === answer ? "Correct!" : "Incorrect"}</p>
-      )} */}
     </div>
   );
 };
