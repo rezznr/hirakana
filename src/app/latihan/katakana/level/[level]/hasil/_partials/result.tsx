@@ -35,10 +35,12 @@ const ResultPage = ({ level }: { level: string }) => {
   useEffect(() => {
     // Set message based on current level score
     if (currentLevel) {
-      if (currentLevel.score >= 90) {
-        setMessage("Luar biasa! Anda sangat hebat!");
+      if (currentLevel.score === 100) {
+        setMessage("Sempurna! Wow kamu Luar Biasa!");
+      } else if (currentLevel.score >= 90) {
+        setMessage("Luar biasa! Kamu sangat hebat!");
       } else if (currentLevel.score >= 70) {
-        setMessage("Bagus sekali! Anda telah lulus level ini.");
+        setMessage("Bagus sekali! Kamu telah lulus level ini.");
       } else {
         setMessage("Jangan menyerah! Cobalah lagi untuk lulus.");
       }
