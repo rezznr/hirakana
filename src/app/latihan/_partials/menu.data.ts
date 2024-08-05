@@ -1,4 +1,4 @@
-import { menuBelajar, menuQuiz, menuLatihan } from "@assets/img/index";
+import { menuBelajar, menuLatihan } from "@assets/img/index";
 
 export const menu = [
   {
