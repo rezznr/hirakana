@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Poppins, Potta_One } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 // import { GlobalStateProvider } from "./globalStateContext";
 
 const poppins = Poppins({ weight: ["300", "400"], subsets: ["latin"] });
-const pottaOne = Potta_One({ weight: ["400"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Hirakana",
@@ -21,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="id">
       {/* <GlobalStateProvider> */}
-      <body className={poppins.className || pottaOne.className}>
+      <body className={poppins.className}>
         <Navbar />
         <div className="flex items-center justify-center pb-10">{children}</div>
       </body>

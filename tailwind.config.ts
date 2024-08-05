@@ -25,7 +25,6 @@ const config: Config = {
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
-        pottaOne: ["Potta One", "cursive"],
       },
     },
   },

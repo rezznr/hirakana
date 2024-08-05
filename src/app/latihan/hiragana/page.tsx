@@ -1,9 +1,5 @@
 import { Latihan } from "./_partials/latihan";
-
-export const pathName = "Hiragana";
-export const apiURL = "/api/latihan/hiragana";
-export const url = "/latihan/hiragana";
-export const localStorage = "hiraganaTrainCompletedLevels";
+import { apiUrl, localStorage, pathName, url } from "./config";
 
 export const metadata = {
   title: `Latihan | ${pathName}`,
@@ -14,7 +10,7 @@ const LatihanPage = () => {
     <>
       <Latihan
         localStorageName={localStorage}
-        apiURL={apiURL}
+        apiURL={apiUrl}
         pathName={pathName}
         url={url}
       />
