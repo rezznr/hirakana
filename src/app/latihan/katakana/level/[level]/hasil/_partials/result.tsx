@@ -10,7 +10,15 @@ interface CompletedLevel {
   score: number;
 }
 
-const ResultPage = ({ level, url }: { level: string; url: string }) => {
+const ResultPage = ({
+  level,
+  url,
+  localStorageName,
+}: {
+  level: string;
+  url: string;
+  localStorageName: string;
+}) => {
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
   const [currentLevel, setCurrentLevel] = useState<CompletedLevel | null>(null);
@@ -21,7 +29,7 @@ const ResultPage = ({ level, url }: { level: string; url: string }) => {
   useEffect(() => {
     // Fetch completed levels from localStorage
     const storedCompletedLevels: CompletedLevel[] = JSON.parse(
-      localStorage.getItem("completedLevels") || "[]"
+      localStorage.getItem(localStorageName) || "[]"
     );
 
     // Find the completed level using the level parameter from the URL
@@ -30,7 +38,7 @@ const ResultPage = ({ level, url }: { level: string; url: string }) => {
     );
     setCurrentLevel(currentLevel || null);
     setLoading(false);
-  }, [level]);
+  }, [level, localStorageName]);
 
   useEffect(() => {
     // Set message based on current level score

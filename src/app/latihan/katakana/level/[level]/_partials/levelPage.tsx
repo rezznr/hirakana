@@ -22,10 +22,12 @@ const LevelPage = ({
   level,
   apiURL,
   url,
+  localStorageName,
 }: {
   level: string;
   apiURL: string;
   url: string;
+  localStorageName: string;
 }) => {
   const [questions, setQuestions] = useState<QuestionData[]>([]);
   const [loading, setLoading] = useState(true);
@@ -66,7 +68,7 @@ const LevelPage = ({
   // Check access to the level
   const checkAccess = useCallback(() => {
     const completedLevels = JSON.parse(
-      localStorage.getItem("completedLevels") || "[]"
+      localStorage.getItem(localStorageName) || "[]"
     );
 
     const levelInt = parseInt(level, 10);
@@ -85,7 +87,7 @@ const LevelPage = ({
     );
 
     return (previousLevel && previousLevel.score >= 70) || currentLevel;
-  }, [level]);
+  }, [level, localStorageName]);
 
   useEffect(() => {
     if (!checkAccess()) {
@@ -101,7 +103,7 @@ const LevelPage = ({
   const completed = useCallback(
     (completedLevel: number, score: number) => {
       const completedLevels = JSON.parse(
-        localStorage.getItem("completedLevels") || "[]"
+        localStorage.getItem(localStorageName) || "[]"
       );
       const updatedLevels = completedLevels.map(
         (lvl: { level: number; score: number }) =>
@@ -117,12 +119,12 @@ const LevelPage = ({
         updatedLevels.push({ level: completedLevel, score });
       }
 
-      localStorage.setItem("completedLevels", JSON.stringify(updatedLevels));
+      localStorage.setItem(localStorageName, JSON.stringify(updatedLevels));
 
       // Immediately navigate to the results page
       router.push(`${url}/level/${level}/hasil`);
     },
-    [level, router, url]
+    [level, router, url, localStorageName]
   );
 
   // Render loading state
