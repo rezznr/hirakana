@@ -32,10 +32,12 @@ const Latihan = ({
   apiURL,
   pathName,
   url,
+  localStorageName,
 }: {
   apiURL: string;
   pathName: string;
   url: string;
+  localStorageName: string;
 }) => {
   const [completedLevels, setCompletedLevels] = useState<CompletedLevel[]>([]);
   const [questionsData, setQuestionsData] = useState<QuestionsData | null>(
@@ -70,19 +72,19 @@ const Latihan = ({
 
   useEffect(() => {
     // Fetch completed levels from local storage
-    const savedLevels = localStorage.getItem("completedLevels");
+    const savedLevels = localStorage.getItem(localStorageName);
     if (savedLevels) {
       setCompletedLevels(JSON.parse(savedLevels));
     }
 
     fetchQuestionsData(); // Call the fetch function
-  }, [fetchQuestionsData]);
+  }, [fetchQuestionsData, localStorageName]);
 
   useEffect(() => {
     if (completedLevels.length > 0) {
-      localStorage.setItem("completedLevels", JSON.stringify(completedLevels));
+      localStorage.setItem(localStorageName, JSON.stringify(completedLevels));
     }
-  }, [completedLevels]);
+  }, [completedLevels, localStorageName]);
 
   // Handle level selection
   const handleSelectLevel = useCallback(

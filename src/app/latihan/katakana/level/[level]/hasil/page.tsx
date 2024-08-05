@@ -1,4 +1,4 @@
-import { url } from "../../../page";
+import { localStorage, url } from "../../../page";
 import ResultPage from "./_partials/result";
 
 type Params = {
@@ -10,7 +10,7 @@ type Params = {
 function Page({ params: { level } }: Params) {
   return (
     <div>
-      <ResultPage url={url} level={level} />
+      <ResultPage localStorageName={localStorage} url={url} level={level} />
     </div>
   );
 }
