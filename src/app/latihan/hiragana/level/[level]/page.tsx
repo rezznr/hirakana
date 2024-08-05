@@ -1,4 +1,4 @@
-import { apiURL, localStorage, url } from "../../page";
+import { apiUrl, localStorage, url } from "../../config";
 import { LevelPage } from "./_partials/levelPage";
 
 export async function generateMetadata({ params: { level } }: Params) {
@@ -21,7 +21,7 @@ function page({ params: { level } }: Params) {
     <>
       <LevelPage
         localStorageName={localStorage}
-        apiURL={apiURL}
+        apiURL={apiUrl}
         url={url}
         level={level}
       />

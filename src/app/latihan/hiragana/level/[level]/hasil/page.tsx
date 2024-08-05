@@ -1,4 +1,4 @@
-import { localStorage, url } from "../../../page";
+import { localStorage, url } from "../../../config";
 import ResultPage from "./_partials/result";
 
 type Params = {
