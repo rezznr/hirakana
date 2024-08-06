@@ -207,7 +207,7 @@
         {
           "id": "2",
           "question": "Apa bacaan dari huruf ini 'でんわ'?",
-          "options": ["denwa", "denha", "denwa", "denoa"],
+          "options": ["denhua", "denha", "denwa", "denoa"],
           "answer": "denwa"
         },
         {
