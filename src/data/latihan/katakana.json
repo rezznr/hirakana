@@ -1,0 +1,574 @@
+{
+  "levels": [
+    {
+      "level": 1,
+      "questions": [
+        {
+          "question": "Apa bacaan dari 'ア'?",
+          "options": ["a", "i", "u", "e"],
+          "answer": "a"
+        },
+        {
+          "question": "Apa bacaan dari 'イ'?",
+          "options": ["i", "a", "u", "e"],
+          "answer": "i"
+        },
+        {
+          "question": "Apa bacaan dari 'ウ'?",
+          "options": ["u", "a", "i", "e"],
+          "answer": "u"
+        },
+        {
+          "question": "Apa bacaan dari 'エ'?",
+          "options": ["e", "a", "i", "u"],
+          "answer": "e"
+        },
+        {
+          "question": "Apa bacaan dari 'オ'?",
+          "options": ["o", "a", "i", "e"],
+          "answer": "o"
+        },
+        {
+          "question": "Apa bacaan dari 'カ'?",
+          "options": ["ka", "ki", "ku", "ke"],
+          "answer": "ka"
+        },
+        {
+          "question": "Apa bacaan dari 'キ'?",
+          "options": ["ki", "ka", "ku", "ke"],
+          "answer": "ki"
+        },
+        {
+          "question": "Apa bacaan dari 'ク'?",
+          "options": ["ku", "ka", "ki", "ke"],
+          "answer": "ku"
+        },
+        {
+          "question": "Apa bacaan dari 'ケ'?",
+          "options": ["ke", "ka", "ki", "ku"],
+          "answer": "ke"
+        },
+        {
+          "question": "Apa bacaan dari 'コ'?",
+          "options": ["ko", "ka", "ki", "ku"],
+          "answer": "ko"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "questions": [
+        {
+          "question": "Apa bacaan dari 'サ'?",
+          "options": ["sa", "shi", "su", "se"],
+          "answer": "sa"
+        },
+        {
+          "question": "Apa bacaan dari 'シ'?",
+          "options": ["shi", "sa", "su", "se"],
+          "answer": "shi"
+        },
+        {
+          "question": "Apa bacaan dari 'ス'?",
+          "options": ["su", "sa", "shi", "se"],
+          "answer": "su"
+        },
+        {
+          "question": "Apa bacaan dari 'セ'?",
+          "options": ["se", "sa", "shi", "su"],
+          "answer": "se"
+        },
+        {
+          "question": "Apa bacaan dari 'ソ'?",
+          "options": ["so", "sa", "shi", "su"],
+          "answer": "so"
+        },
+        {
+          "question": "Apa bacaan dari 'タ'?",
+          "options": ["ta", "chi", "tsu", "te"],
+          "answer": "ta"
+        },
+        {
+          "question": "Apa bacaan dari 'チ'?",
+          "options": ["chi", "ta", "tsu", "te"],
+          "answer": "chi"
+        },
+        {
+          "question": "Apa bacaan dari 'ツ'?",
+          "options": ["tsu", "ta", "chi", "te"],
+          "answer": "tsu"
+        },
+        {
+          "question": "Apa bacaan dari 'テ'?",
+          "options": ["te", "ta", "chi", "tsu"],
+          "answer": "te"
+        },
+        {
+          "question": "Apa bacaan dari 'ト'?",
+          "options": ["to", "ta", "chi", "tsu"],
+          "answer": "to"
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "questions": [
+        {
+          "question": "Apa bacaan dari 'ナ'?",
+          "options": ["na", "ni", "nu", "ne"],
+          "answer": "na"
+        },
+        {
+          "question": "Apa bacaan dari 'ニ'?",
+          "options": ["ni", "na", "nu", "ne"],
+          "answer": "ni"
+        },
+        {
+          "question": "Apa bacaan dari 'ヌ'?",
+          "options": ["nu", "na", "ni", "ne"],
+          "answer": "nu"
+        },
+        {
+          "question": "Apa bacaan dari 'ネ'?",
+          "options": ["ne", "na", "ni", "nu"],
+          "answer": "ne"
+        },
+        {
+          "question": "Apa bacaan dari 'ノ'?",
+          "options": ["no", "na", "ni", "nu"],
+          "answer": "no"
+        },
+        {
+          "question": "Apa bacaan dari 'ハ'?",
+          "options": ["ha", "hi", "fu", "he"],
+          "answer": "ha"
+        },
+        {
+          "question": "Apa bacaan dari 'ヒ'?",
+          "options": ["hi", "ha", "fu", "he"],
+          "answer": "hi"
+        },
+        {
+          "question": "Apa bacaan dari 'フ'?",
+          "options": ["fu", "ha", "hi", "he"],
+          "answer": "fu"
+        },
+        {
+          "question": "Apa bacaan dari 'ヘ'?",
+          "options": ["he", "ha", "hi", "fu"],
+          "answer": "he"
+        },
+        {
+          "question": "Apa bacaan dari 'ホ'?",
+          "options": ["ho", "ha", "hi", "fu"],
+          "answer": "ho"
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "questions": [
+        {
+          "question": "Apa bacaan dari 'マ'?",
+          "options": ["ma", "mi", "mu", "me"],
+          "answer": "ma"
+        },
+        {
+          "question": "Apa bacaan dari 'ミ'?",
+          "options": ["mi", "ma", "mu", "me"],
+          "answer": "mi"
+        },
+        {
+          "question": "Apa bacaan dari 'ム'?",
+          "options": ["mu", "ma", "mi", "me"],
+          "answer": "mu"
+        },
+        {
+          "question": "Apa bacaan dari 'メ'?",
+          "options": ["me", "ma", "mi", "mu"],
+          "answer": "me"
+        },
+        {
+          "question": "Apa bacaan dari 'モ'?",
+          "options": ["mo", "ma", "mi", "mu"],
+          "answer": "mo"
+        },
+        {
+          "question": "Apa bacaan dari 'ヤ'?",
+          "options": ["ya", "yo", "yu", "ye"],
+          "answer": "ya"
+        },
+        {
+          "question": "Apa bacaan dari 'ユ'?",
+          "options": ["yu", "yo", "ya", "ye"],
+          "answer": "yu"
+        },
+        {
+          "question": "Apa bacaan dari 'ヨ'?",
+          "options": ["yo", "ya", "yu", "ye"],
+          "answer": "yo"
+        },
+        {
+          "question": "Apa bacaan dari 'ラ'?",
+          "options": ["ra", "ri", "ru", "re"],
+          "answer": "ra"
+        },
+        {
+          "question": "Apa bacaan dari 'リ'?",
+          "options": ["ri", "ra", "ru", "re"],
+          "answer": "ri"
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "questions": [
+        {
+          "question": "Apa bacaan dari 'ル'?",
+          "options": ["ru", "ra", "ri", "re"],
+          "answer": "ru"
+        },
+        {
+          "question": "Apa bacaan dari 'レ'?",
+          "options": ["re", "ra", "ri", "ru"],
+          "answer": "re"
+        },
+        {
+          "question": "Apa bacaan dari 'ロ'?",
+          "options": ["ro", "ra", "ri", "ru"],
+          "answer": "ro"
+        },
+        {
+          "question": "Apa bacaan dari 'ワ'?",
+          "options": ["wa", "wo", "wi", "we"],
+          "answer": "wa"
+        },
+        {
+          "question": "Apa bacaan dari 'ヲ'?",
+          "options": ["wo", "wa", "wi", "we"],
+          "answer": "wo"
+        },
+        {
+          "question": "Apa bacaan dari 'ン'?",
+          "options": ["n", "nu", "na", "ne"],
+          "answer": "n"
+        },
+        {
+          "question": "Apa bacaan dari 'ガ'?",
+          "options": ["ga", "ka", "gi", "gu"],
+          "answer": "ga"
+        },
+        {
+          "question": "Apa bacaan dari 'ギ'?",
+          "options": ["gi", "ga", "gu", "ge"],
+          "answer": "gi"
+        },
+        {
+          "question": "Apa bacaan dari 'グ'?",
+          "options": ["gu", "ga", "gi", "ge"],
+          "answer": "gu"
+        },
+        {
+          "question": "Apa bacaan dari 'ゲ'?",
+          "options": ["ge", "ga", "gi", "gu"],
+          "answer": "ge"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "questions": [
+        {
+          "question": "Apa bacaan dari 'ゴ'?",
+          "options": ["go", "ga", "gi", "gu"],
+          "answer": "go"
+        },
+        {
+          "question": "Apa bacaan dari 'ザ'?",
+          "options": ["za", "sa", "ji", "zu"],
+          "answer": "za"
+        },
+        {
+          "question": "Apa bacaan dari 'ジ'?",
+          "options": ["ji", "sa", "zu", "ze"],
+          "answer": "ji"
+        },
+        {
+          "question": "Apa bacaan dari 'ズ'?",
+          "options": ["zu", "sa", "ji", "ze"],
+          "answer": "zu"
+        },
+        {
+          "question": "Apa bacaan dari 'ゼ'?",
+          "options": ["ze", "sa", "ji", "zu"],
+          "answer": "ze"
+        },
+        {
+          "question": "Apa bacaan dari 'ゾ'?",
+          "options": ["zo", "sa", "ji", "zu"],
+          "answer": "zo"
+        },
+        {
+          "question": "Apa bacaan dari 'ダ'?",
+          "options": ["da", "ta", "di", "du"],
+          "answer": "da"
+        },
+        {
+          "question": "Apa bacaan dari 'ヂ'?",
+          "options": ["ji", "ta", "zu", "de"],
+          "answer": "ji"
+        },
+        {
+          "question": "Apa bacaan dari 'ヅ'?",
+          "options": ["zu", "ta", "ji", "de"],
+          "answer": "zu"
+        },
+        {
+          "question": "Apa bacaan dari 'デ'?",
+          "options": ["de", "ta", "ji", "zu"],
+          "answer": "de"
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "questions": [
+        {
+          "question": "Apa bacaan dari 'ド'?",
+          "options": ["do", "ta", "ji", "zu"],
+          "answer": "do"
+        },
+        {
+          "question": "Apa bacaan dari 'バ'?",
+          "options": ["ba", "pa", "bi", "bu"],
+          "answer": "ba"
+        },
+        {
+          "question": "Apa bacaan dari 'ビ'?",
+          "options": ["bi", "pa", "bu", "be"],
+          "answer": "bi"
+        },
+        {
+          "question": "Apa bacaan dari 'ブ'?",
+          "options": ["bu", "pa", "bi", "be"],
+          "answer": "bu"
+        },
+        {
+          "question": "Apa bacaan dari 'ベ'?",
+          "options": ["be", "pa", "bi", "bu"],
+          "answer": "be"
+        },
+        {
+          "question": "Apa bacaan dari 'ボ'?",
+          "options": ["bo", "pa", "bi", "bu"],
+          "answer": "bo"
+        },
+        {
+          "question": "Apa bacaan dari 'パ'?",
+          "options": ["pa", "ba", "pi", "pu"],
+          "answer": "pa"
+        },
+        {
+          "question": "Apa bacaan dari 'ピ'?",
+          "options": ["pi", "ba", "bi", "pe"],
+          "answer": "pi"
+        },
+        {
+          "question": "Apa bacaan dari 'プ'?",
+          "options": ["pu", "bu", "pi", "be"],
+          "answer": "pu"
+        },
+        {
+          "question": "Apa bacaan dari 'ペ'?",
+          "options": ["pe", "be", "pi", "pu"],
+          "answer": "pe"
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "questions": [
+        {
+          "question": "Apa bacaan dari 'ポ'?",
+          "options": ["po", "ba", "pi", "pu"],
+          "answer": "po"
+        },
+        {
+          "question": "Apa bacaan dari 'キャ'?",
+          "options": ["kya", "ki", "kyo", "kyu"],
+          "answer": "kya"
+        },
+        {
+          "question": "Apa bacaan dari 'キュ'?",
+          "options": ["kyu", "ki", "kya", "kyo"],
+          "answer": "kyu"
+        },
+        {
+          "question": "Apa bacaan dari 'キョ'?",
+          "options": ["kyo", "ki", "kya", "kyu"],
+          "answer": "kyo"
+        },
+        {
+          "question": "Apa bacaan dari 'シャ'?",
+          "options": ["sha", "shi", "sho", "shu"],
+          "answer": "sha"
+        },
+        {
+          "question": "Apa bacaan dari 'シュ'?",
+          "options": ["shu", "shi", "sha", "sho"],
+          "answer": "shu"
+        },
+        {
+          "question": "Apa bacaan dari 'ショ'?",
+          "options": ["sho", "shi", "sha", "shu"],
+          "answer": "sho"
+        },
+        {
+          "question": "Apa bacaan dari 'チャ'?",
+          "options": ["cha", "chi", "cho", "chu"],
+          "answer": "cha"
+        },
+        {
+          "question": "Apa bacaan dari 'チュ'?",
+          "options": ["chu", "chi", "cha", "cho"],
+          "answer": "chu"
+        },
+        {
+          "question": "Apa bacaan dari 'チョ'?",
+          "options": ["cho", "chi", "cha", "chu"],
+          "answer": "cho"
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "questions": [
+        {
+          "question": "Apa bacaan dari 'ニャ'?",
+          "options": ["nya", "ni", "nyo", "nyu"],
+          "answer": "nya"
+        },
+        {
+          "question": "Apa bacaan dari 'ニュ'?",
+          "options": ["nyu", "ni", "nya", "nyo"],
+          "answer": "nyu"
+        },
+        {
+          "question": "Apa bacaan dari 'ニョ'?",
+          "options": ["nyo", "ni", "nya", "nyu"],
+          "answer": "nyo"
+        },
+        {
+          "question": "Apa bacaan dari 'ヒャ'?",
+          "options": ["hya", "hi", "hyo", "hyu"],
+          "answer": "hya"
+        },
+        {
+          "question": "Apa bacaan dari 'ヒュ'?",
+          "options": ["hyu", "hi", "hya", "hyo"],
+          "answer": "hyu"
+        },
+        {
+          "question": "Apa bacaan dari 'ヒョ'?",
+          "options": ["hyo", "hi", "hya", "hyu"],
+          "answer": "hyo"
+        },
+        {
+          "question": "Apa bacaan dari 'ミャ'?",
+          "options": ["mya", "mi", "myo", "myu"],
+          "answer": "mya"
+        },
+        {
+          "question": "Apa bacaan dari 'ミュ'?",
+          "options": ["myu", "mi", "mya", "myo"],
+          "answer": "myu"
+        },
+        {
+          "question": "Apa bacaan dari 'ミョ'?",
+          "options": ["myo", "mi", "mya", "myu"],
+          "answer": "myo"
+        },
+        {
+          "question": "Apa bacaan dari 'リャ'?",
+          "options": ["rya", "ri", "ryo", "ryu"],
+          "answer": "rya"
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "questions": [
+        {
+          "question": "Apa bacaan dari 'リュ'?",
+          "options": ["ryu", "ri", "rya", "ryo"],
+          "answer": "ryu"
+        },
+        {
+          "question": "Apa bacaan dari 'リョ'?",
+          "options": ["ryo", "ri", "rya", "ryu"],
+          "answer": "ryo"
+        },
+        {
+          "question": "Apa bacaan dari 'ギャ'?",
+          "options": ["gya", "gi", "gyo", "gyu"],
+          "answer": "gya"
+        },
+        {
+          "question": "Apa bacaan dari 'ギュ'?",
+          "options": ["gyu", "gi", "gya", "gyo"],
+          "answer": "gyu"
+        },
+        {
+          "question": "Apa bacaan dari 'ギョ'?",
+          "options": ["gyo", "gi", "gya", "gyu"],
+          "answer": "gyo"
+        },
+        {
+          "question": "Apa bacaan dari 'ジャ'?",
+          "options": ["ja", "ji", "jo", "ju"],
+          "answer": "ja"
+        },
+        {
+          "question": "Apa bacaan dari 'ジュ'?",
+          "options": ["ju", "ji", "ja", "jo"],
+          "answer": "ju"
+        },
+        {
+          "question": "Apa bacaan dari 'ジョ'?",
+          "options": ["jo", "ji", "ja", "ju"],
+          "answer": "jo"
+        },
+        {
+          "question": "Apa bacaan dari 'ビャ'?",
+          "options": ["bya", "bi", "byo", "byu"],
+          "answer": "bya"
+        },
+        {
+          "question": "Apa bacaan dari 'ビュ'?",
+          "options": ["byu", "bi", "bya", "byo"],
+          "answer": "byu"
+        },
+        {
+          "question": "Apa bacaan dari 'ビョ'?",
+          "options": ["byo", "bi", "bya", "byu"],
+          "answer": "byo"
+        },
+        {
+          "question": "Apa bacaan dari 'ピャ'?",
+          "options": ["pya", "pi", "pyo", "pyu"],
+          "answer": "pya"
+        },
+        {
+          "question": "Apa bacaan dari 'ピュ'?",
+          "options": ["pyu", "pi", "pya", "pyo"],
+          "answer": "pyu"
+        },
+        {
+          "question": "Apa bacaan dari 'ピョ'?",
+          "options": ["pyo", "pi", "pya", "pyu"],
+          "answer": "pyo"
+        }
+      ]
+    }
+  ]
+}

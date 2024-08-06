@@ -1,0 +1,709 @@
+{
+  "levels": [
+    {
+      "level": 1,
+      "questions": [
+        {
+          "id": "1",
+          "question": "Apa bacaan dari huruf ini 'テレビ'?",
+          "options": ["terebi", "teribi", "taribi", "terubu"],
+          "answer": "terebi"
+        },
+        {
+          "id": "2",
+          "question": "Apa bacaan dari huruf ini 'パン'?",
+          "options": ["pan", "pen", "pun", "pin"],
+          "answer": "pan"
+        },
+        {
+          "id": "3",
+          "question": "Apa bacaan dari huruf ini 'アニメ'?",
+          "options": ["anime", "anima", "enime", "animee"],
+          "answer": "anime"
+        },
+        {
+          "id": "4",
+          "question": "Apa bacaan dari huruf ini 'アメリカ'?",
+          "options": ["amerika", "america", "americha", "umerika"],
+          "answer": "amerika"
+        },
+        {
+          "id": "5",
+          "question": "Apa bacaan dari huruf ini 'ケーキ' (cake)?",
+          "options": ["keeki", "keiki", "keki", "kaaki"],
+          "answer": "keeki"
+        },
+        {
+          "id": "6",
+          "question": "Apa huruf Katakana untuk 'kamera'?",
+          "options": ["カメラ", "カマラ", "カメナ", "カミラ"],
+          "answer": "カメラ"
+        },
+        {
+          "id": "7",
+          "question": "Apa huruf Katakana untuk 'basu' (bus)?",
+          "options": ["バス", "バシュ", "バズ", "バツ"],
+          "answer": "バス"
+        },
+        {
+          "id": "8",
+          "question": "Apa huruf Katakana untuk 'piza' (pizza)?",
+          "options": ["ピザ", "ビザ", "ピサ", "ペザ"],
+          "answer": "ピザ"
+        },
+        {
+          "id": "9",
+          "question": "Apa huruf Katakana untuk 'kurisumasu' (Christmas)?",
+          "options": ["クリスマス", "クリスマシュ", "クリスマズ", "クリスムス"],
+          "answer": "クリスマス"
+        },
+        {
+          "id": "10",
+          "question": "Apa huruf Katakana untuk 'supa'?",
+          "options": ["スパ", "スパー", "スーパ", "スーパア"],
+          "answer": "スパ"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "questions": [
+        {
+          "id": "1",
+          "question": "Apa bacaan dari huruf ini 'タクシー'?",
+          "options": ["takushii", "takuji", "taksi", "takushi"],
+          "answer": "takushii"
+        },
+        {
+          "id": "2",
+          "question": "Apa bacaan dari huruf ini 'アイスクリーム'?",
+          "options": [
+            "aisukuriimu",
+            "aishikuriimu",
+            "aisukurimu",
+            "aisukurimu"
+          ],
+          "answer": "aisukuriimu"
+        },
+        {
+          "id": "3",
+          "question": "Apa bacaan dari huruf ini 'ピアノ'?",
+          "options": ["piano", "piono", "pieno", "pianu"],
+          "answer": "piano"
+        },
+        {
+          "id": "4",
+          "question": "Apa bacaan dari huruf ini 'スポーツ'?",
+          "options": ["supootsu", "suupotsu", "supotsu", "supoutsu"],
+          "answer": "supootsu"
+        },
+        {
+          "id": "5",
+          "question": "Apa bacaan dari huruf ini 'コーヒー'?",
+          "options": ["koohii", "kohee", "kopi", "kohe"],
+          "answer": "koohii"
+        },
+        {
+          "id": "6",
+          "question": "Apa huruf Katakana untuk 'biiru' (beer)?",
+          "options": ["ビール", "ビーリ", "ビイリ", "ビーラ"],
+          "answer": "ビール"
+        },
+        {
+          "id": "7",
+          "question": "Apa huruf Katakana untuk 'pasokon' (PC/laptop)?",
+          "options": ["パソコン", "パショコン", "パサコン", "パソカン"],
+          "answer": "パソコン"
+        },
+        {
+          "id": "8",
+          "question": "Apa huruf Katakana untuk 'terebi' (TV)?",
+          "options": ["テレビ", "テレピ", "テルビ", "テレベ"],
+          "answer": "テレビ"
+        },
+        {
+          "id": "9",
+          "question": "Apa huruf Katakana untuk 'koppu' (cup)?",
+          "options": ["コップ", "コッポ", "コプ", "コップル"],
+          "answer": "コップ"
+        },
+        {
+          "id": "10",
+          "question": "Apa huruf Katakana untuk 'fooku' (fork)?",
+          "options": ["フォーク", "フォク", "フォクー", "フーク"],
+          "answer": "フォーク"
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "questions": [
+        {
+          "id": "1",
+          "question": "Apa bacaan dari huruf ini 'トマト'?",
+          "options": ["tomato", "tumato", "tometo", "tomoto"],
+          "answer": "tomato"
+        },
+        {
+          "id": "2",
+          "question": "Apa bacaan dari huruf ini 'サンドイッチ'?",
+          "options": ["sandoicchi", "sandoitchi", "sandoitti", "sandoecchi"],
+          "answer": "sandoicchi"
+        },
+        {
+          "id": "3",
+          "question": "Apa bacaan dari huruf ini 'カレー'?",
+          "options": ["karee", "karei", "kare", "karaa"],
+          "answer": "karee"
+        },
+        {
+          "id": "4",
+          "question": "Apa bacaan dari huruf ini 'ハンバーガー'?",
+          "options": ["hambaagaa", "hanbaaga", "hambaaga", "hanbaagu"],
+          "answer": "hambaagaa"
+        },
+        {
+          "id": "5",
+          "question": "Apa bacaan dari huruf ini 'アニメーション'?",
+          "options": ["animeeshon", "animetion", "animeshon", "animeeshan"],
+          "answer": "animeeshon"
+        },
+        {
+          "id": "6",
+          "question": "Apa huruf Katakana untuk 'pen'?",
+          "options": ["ペン", "ベン", "ペンジ", "パン"],
+          "answer": "ペン"
+        },
+        {
+          "id": "7",
+          "question": "Apa huruf Katakana untuk 'kuruma' (car)?",
+          "options": ["クルマ", "クロマ", "クルメ", "クレマ"],
+          "answer": "クルマ"
+        },
+        {
+          "id": "8",
+          "question": "Apa huruf Katakana untuk 'doa' (door)?",
+          "options": ["ドア", "ドヤ", "ドアー", "ドウ"],
+          "answer": "ドア"
+        },
+        {
+          "id": "9",
+          "question": "Apa huruf Katakana untuk 'aisu' (ice)?",
+          "options": ["アイス", "アイズ", "アイセ", "アエス"],
+          "answer": "アイス"
+        },
+        {
+          "id": "10",
+          "question": "Apa huruf Katakana untuk 'konbini' (convenience store)?",
+          "options": ["コンビニ", "コンビミ", "コンベニ", "コンビリ"],
+          "answer": "コンビニ"
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "questions": [
+        {
+          "id": "1",
+          "question": "Apa bacaan dari huruf ini 'メール'?",
+          "options": ["meeru", "meiru", "meero", "meru"],
+          "answer": "meeru"
+        },
+        {
+          "id": "2",
+          "question": "Apa bacaan dari huruf ini 'コンピュータ'?",
+          "options": ["konpyuuta", "konpiuta", "konpuuta", "kompyuta"],
+          "answer": "konpyuuta"
+        },
+        {
+          "id": "3",
+          "question": "Apa bacaan dari huruf ini 'ゲーム'?",
+          "options": ["geemu", "gemu", "geimu", "geem"],
+          "answer": "geemu"
+        },
+        {
+          "id": "4",
+          "question": "Apa bacaan dari huruf ini 'ミルク'?",
+          "options": ["miruku", "meruku", "meriku", "miruk"],
+          "answer": "miruku"
+        },
+        {
+          "id": "5",
+          "question": "Apa bacaan dari huruf ini 'サラダ'?",
+          "options": ["sarada", "salada", "sarata", "salata"],
+          "answer": "sarada"
+        },
+        {
+          "id": "6",
+          "question": "Apa huruf Katakana untuk 'taoru' (towel)?",
+          "options": ["タオル", "タウル", "タオラ", "タロウ"],
+          "answer": "タオル"
+        },
+        {
+          "id": "7",
+          "question": "Apa huruf Katakana untuk 'miruku' (milk)?",
+          "options": ["ミルク", "ミルクス", "ミルカ", "メルク"],
+          "answer": "ミルク"
+        },
+        {
+          "id": "8",
+          "question": "Apa huruf Katakana untuk 'bideo' (video)?",
+          "options": ["ビデオ", "ビデヲ", "ビデヨ", "ビデウ"],
+          "answer": "ビデオ"
+        },
+        {
+          "id": "9",
+          "question": "Apa huruf Katakana untuk 'denki' (electricity)?",
+          "options": ["デンキ", "デンギ", "デンギー", "デンケ"],
+          "answer": "デンキ"
+        },
+        {
+          "id": "10",
+          "question": "Apa huruf Katakana untuk 'raisu' (rice)?",
+          "options": ["ライス", "レイス", "リイス", "ルイス"],
+          "answer": "ライス"
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "questions": [
+        {
+          "id": "1",
+          "question": "Apa bacaan dari huruf ini 'ドーナツ'?",
+          "options": ["doonatsu", "donatsu", "donats", "dounatsu"],
+          "answer": "doonatsu"
+        },
+        {
+          "id": "2",
+          "question": "Apa bacaan dari huruf ini 'ホタル'?",
+          "options": ["hoteru", "hotaru", "hoter", "hotelu"],
+          "answer": "hotaru"
+        },
+        {
+          "id": "3",
+          "question": "Apa bacaan dari huruf ini 'ナイフ'?",
+          "options": ["naifu", "naibu", "naifo", "naihu"],
+          "answer": "naifu"
+        },
+        {
+          "id": "4",
+          "question": "Apa bacaan dari huruf ini 'レストラン'?",
+          "options": ["resutoran", "lesutoran", "resutora", "restoran"],
+          "answer": "resutoran"
+        },
+        {
+          "id": "5",
+          "question": "Apa bacaan dari huruf ini 'ジュース'?",
+          "options": ["juusu", "juushi", "jus", "jussu"],
+          "answer": "juusu"
+        },
+        {
+          "id": "6",
+          "question": "Apa huruf Katakana untuk 'kafe' (cafe)?",
+          "options": ["カフェ", "カヘ", "カフィ", "カエ"],
+          "answer": "カフェ"
+        },
+        {
+          "id": "7",
+          "question": "Apa huruf Katakana untuk 'pasuta' (pasta)?",
+          "options": ["パスタ", "パスダ", "パスタア", "パス"],
+          "answer": "パスタ"
+        },
+        {
+          "id": "8",
+          "question": "Apa huruf Katakana untuk 'repooto' (report)?",
+          "options": ["レポート", "レポト", "レポット", "レポ"],
+          "answer": "レポート"
+        },
+        {
+          "id": "9",
+          "question": "Apa huruf Katakana untuk 'suutsu' (suit)?",
+          "options": ["スーツ", "スウツ", "スツー", "スーツー"],
+          "answer": "スーツ"
+        },
+        {
+          "id": "10",
+          "question": "Apa huruf Katakana untuk 'nekutai' (necktie)?",
+          "options": ["ネクタイ", "ネクテイ", "ネックタイ", "ネクタ"],
+          "answer": "ネクタイ"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "questions": [
+        {
+          "id": "1",
+          "question": "Apa bacaan dari huruf ini 'チョコレート'?",
+          "options": ["chokoreeto", "chokoreto", "chokorato", "chokoreet"],
+          "answer": "chokoreeto"
+        },
+        {
+          "id": "2",
+          "question": "Apa bacaan dari huruf ini 'ビール'?",
+          "options": ["biiru", "biru", "buuru", "bieru"],
+          "answer": "biiru"
+        },
+        {
+          "id": "3",
+          "question": "Apa bacaan dari huruf ini 'サーフィン'?",
+          "options": ["saafin", "saafing", "safin", "saafingu"],
+          "answer": "saafin"
+        },
+        {
+          "id": "4",
+          "question": "Apa bacaan dari huruf ini 'エレベーター'?",
+          "options": ["erebeetaa", "erebeta", "elebeeta", "erebeeta"],
+          "answer": "erebeetaa"
+        },
+        {
+          "id": "5",
+          "question": "Apa bacaan dari huruf ini 'ラジオ'?",
+          "options": ["rajio", "rajiu", "rajyo", "radjio"],
+          "answer": "rajio"
+        },
+        {
+          "id": "6",
+          "question": "Apa huruf Katakana untuk 'gitaa' (guitar)?",
+          "options": ["ギター", "ギタア", "ギタ", "ギダア"],
+          "answer": "ギター"
+        },
+        {
+          "id": "7",
+          "question": "Apa huruf Katakana untuk 'indoneshia'?",
+          "options": [
+            "インドネシア",
+            "インドシア",
+            "イソドネシア",
+            "インドネア"
+          ],
+          "answer": "インドネシア"
+        },
+        {
+          "id": "8",
+          "question": "Apa huruf Katakana untuk 'baiku' (motorcycle)?",
+          "options": ["バイク", "バク", "バイクー", "バクー"],
+          "answer": "バイク"
+        },
+        {
+          "id": "9",
+          "question": "Apa huruf Katakana untuk 'puuru' (pool)?",
+          "options": ["プール", "プル", "プウル", "ブール"],
+          "answer": "プール"
+        },
+        {
+          "id": "10",
+          "question": "Apa huruf Katakana untuk 'supaakuringu' (sparkling)?",
+          "options": [
+            "スパークリング",
+            "スパークリン",
+            "スパクリン",
+            "スパークル"
+          ],
+          "answer": "スパークリング"
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "questions": [
+        {
+          "id": "1",
+          "question": "Apa bacaan dari huruf ini 'ニュース'?",
+          "options": ["nyuusu", "nius", "nyuus", "nyusu"],
+          "answer": "nyuusu"
+        },
+        {
+          "id": "2",
+          "question": "Apa bacaan dari huruf ini 'ジム'?",
+          "options": ["jimu", "jima", "zimu", "jemu"],
+          "answer": "jimu"
+        },
+        {
+          "id": "3",
+          "question": "Apa bacaan dari huruf ini 'クレジットカード'?",
+          "options": [
+            "kurejittokaado",
+            "kurejitokaado",
+            "kuredittokaado",
+            "kurejittokado"
+          ],
+          "answer": "kurejittokaado"
+        },
+        {
+          "id": "4",
+          "question": "Apa bacaan dari huruf ini 'エアコン'?",
+          "options": ["eakon", "eacon", "eaaron", "eaakon"],
+          "answer": "eakon"
+        },
+        {
+          "id": "5",
+          "question": "Apa bacaan dari huruf ini 'フライドポテト'?",
+          "options": [
+            "furaidopoteto",
+            "furaidopoteta",
+            "furaidopotato",
+            "furaidopotado"
+          ],
+          "answer": "furaidopoteto"
+        },
+        {
+          "id": "6",
+          "question": "Apa huruf Katakana untuk 'gurasu' (glass)?",
+          "options": ["グラス", "グラスイ", "グラスー", "グーラス"],
+          "answer": "グラス"
+        },
+        {
+          "id": "7",
+          "question": "Apa huruf Katakana untuk 'dezain' (design)?",
+          "options": ["デザイン", "デザイソ", "ディザイン", "デーザイン"],
+          "answer": "デザイン"
+        },
+        {
+          "id": "8",
+          "question": "Apa huruf Katakana untuk 'tabako' (tobacco/cigarette)?",
+          "options": ["タバコ", "タバゴ", "タバコー", "タバ"],
+          "answer": "タバコ"
+        },
+        {
+          "id": "9",
+          "question": "Apa huruf Katakana untuk 'sarada' (salad)?",
+          "options": ["サラダ", "サラダイ", "サラダー", "サラダン"],
+          "answer": "サラダ"
+        },
+        {
+          "id": "10",
+          "question": "Apa huruf Katakana untuk 'chiizu' (cheese)?",
+          "options": ["チーズ", "チイス", "チズ", "チーズー"],
+          "answer": "チーズ"
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "questions": [
+        {
+          "id": "1",
+          "question": "Apa bacaan dari huruf ini 'メールアドレス'?",
+          "options": [
+            "meeruadoresu",
+            "meruadoresu",
+            "meeruadorezu",
+            "meiruadresu"
+          ],
+          "answer": "meeruadoresu"
+        },
+        {
+          "id": "2",
+          "question": "Apa bacaan dari huruf ini 'シャツ'?",
+          "options": ["shatsu", "shiyatsu", "satsu", "syatsu"],
+          "answer": "shatsu"
+        },
+        {
+          "id": "3",
+          "question": "Apa bacaan dari huruf ini 'レシート'?",
+          "options": ["reshiito", "reshito", "reshiitoo", "reshi"],
+          "answer": "reshiito"
+        },
+        {
+          "id": "4",
+          "question": "Apa bacaan dari huruf ini 'トイレ'?",
+          "options": ["toire", "toile", "torie", "toirei"],
+          "answer": "toire"
+        },
+        {
+          "id": "5",
+          "question": "Apa bacaan dari huruf ini 'ボールペン'?",
+          "options": ["boorupen", "borupen", "bourupen", "boorupenu"],
+          "answer": "boorupen"
+        },
+        {
+          "id": "6",
+          "question": "Apa huruf Katakana untuk 'takushii' (taxi)?",
+          "options": ["タクシー", "タクシュ", "タクシ", "タクシーイ"],
+          "answer": "タクシー"
+        },
+        {
+          "id": "7",
+          "question": "Apa huruf Katakana untuk 'konsaato' (concert)?",
+          "options": ["コンサート", "コンサト", "コソサート", "コンセート"],
+          "answer": "コンサート"
+        },
+        {
+          "id": "8",
+          "question": "Apa huruf Katakana untuk 'sutoroberii' (strawberry)?",
+          "options": [
+            "ストラベリー",
+            "ストロベリ",
+            "ストロベリー",
+            "ストーベリー"
+          ],
+          "answer": "ストロベリー"
+        },
+        {
+          "id": "9",
+          "question": "Apa huruf Katakana untuk 'suiichi' (switch)?",
+          "options": ["スイッチ", "スイチ", "スウィッチ", "スウイッチ"],
+          "answer": "スイッチ"
+        },
+        {
+          "id": "10",
+          "question": "Apa huruf Katakana untuk 'suupaa' (super)?",
+          "options": ["スーパー", "スーパ", "スウパー", "スパー"],
+          "answer": "スーパー"
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "questions": [
+        {
+          "id": "1",
+          "question": "Apa bacaan dari huruf ini 'ベッド'?",
+          "options": ["beddo", "bedd", "bedo", "bed"],
+          "answer": "beddo"
+        },
+        {
+          "id": "2",
+          "question": "Apa bacaan dari huruf ini 'オフィス'?",
+          "options": ["ofisu", "ofis", "offisu", "ofise"],
+          "answer": "ofisu"
+        },
+        {
+          "id": "3",
+          "question": "Apa bacaan dari huruf ini 'ホテル'?",
+          "options": ["hoteru", "hoter", "hotelu", "hotera"],
+          "answer": "hoteru"
+        },
+        {
+          "id": "4",
+          "question": "Apa bacaan dari huruf ini 'コーヒーショップ'?",
+          "options": [
+            "koohii shoppu",
+            "kohii shoppu",
+            "koohii shop",
+            "kohii shop"
+          ],
+          "answer": "koohii shoppu"
+        },
+        {
+          "id": "5",
+          "question": "Apa bacaan dari huruf ini 'デジタル'?",
+          "options": ["dejitaru", "dejiitaru", "dejitar", "dejitari"],
+          "answer": "dejitaru"
+        },
+        {
+          "id": "6",
+          "question": "Apa huruf Katakana untuk 'jettosukii' (jet ski)?",
+          "options": [
+            "ジェットスキー",
+            "ジエットスキー",
+            "ジェツトスキー",
+            "ジェトスキー"
+          ],
+          "answer": "ジェットスキー"
+        },
+        {
+          "id": "7",
+          "question": "Apa huruf Katakana untuk 'shampuu' (shampoo)?",
+          "options": ["シャンプー", "シャンプ", "シャソプー", "シャンプウ"],
+          "answer": "シャンプー"
+        },
+        {
+          "id": "8",
+          "question": "Apa huruf Katakana untuk 'mirukutii' (milk tea)?",
+          "options": [
+            "ミルクティー",
+            "ミルクチー",
+            "ミルクティ",
+            "ミルクティイ"
+          ],
+          "answer": "ミルクティー"
+        },
+        {
+          "id": "9",
+          "question": "Apa huruf Katakana untuk 'kyandoru' (candlestick)?",
+          "options": ["キャンドル", "キャンドラ", "キャソドル", "キヤンドル"],
+          "answer": "キャンドル"
+        },
+        {
+          "id": "10",
+          "question": "Apa huruf Katakana untuk 'webusaito' (website)?",
+          "options": [
+            "ウェブサイト",
+            "ウエブサイト",
+            "ウエッブサイト",
+            "ウェブサイート"
+          ],
+          "answer": "ウェブサイト"
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "questions": [
+        {
+          "id": "1",
+          "question": "Apa bacaan dari huruf ini 'ファミコン'?",
+          "options": ["famikon", "famicon", "famikan", "fimicon"],
+          "answer": "famikon"
+        },
+        {
+          "id": "2",
+          "question": "Apa bacaan dari huruf ini 'デパート'?",
+          "options": ["depaato", "depato", "depatoo", "depata"],
+          "answer": "depaato"
+        },
+        {
+          "id": "3",
+          "question": "Apa bacaan dari huruf ini 'スポーツカー'?",
+          "options": ["supootsukaa", "supotsukaa", "supootsuka", "supootokaa"],
+          "answer": "supootsukaa"
+        },
+        {
+          "id": "4",
+          "question": "Apa bacaan dari huruf ini 'ポスト'?",
+          "options": ["posuto", "posutoo", "post", "poseto"],
+          "answer": "posuto"
+        },
+        {
+          "id": "5",
+          "question": "Apa bacaan dari huruf ini 'ヘリコプター'?",
+          "options": ["herikoputaa", "herikoputah", "herikoptar", "herikoputa"],
+          "answer": "herikoputaa"
+        },
+        {
+          "id": "6",
+          "question": "Apa huruf Katakana untuk 'aifon' (iPhone)?",
+          "options": ["アイフォソ", "アイホン", "アイフオン", "アイフォン"],
+          "answer": "アイフォン"
+        },
+        {
+          "id": "7",
+          "question": "Apa huruf Katakana untuk 'burando' (brand)?",
+          "options": ["ブランド", "ブラド", "ブラウンド", "ブラン"],
+          "answer": "ブランド"
+        },
+        {
+          "id": "8",
+          "question": "Apa huruf Katakana untuk 'sumaho' (smartphone)?",
+          "options": ["スマホ", "スーマホ", "スマホー", "スムホ"],
+          "answer": "スマホ"
+        },
+        {
+          "id": "9",
+          "question": "Apa huruf Katakana untuk 'raibu' (live performance)?",
+          "options": ["ライブ", "ライフ", "ライプ", "ライヴ"],
+          "answer": "ライブ"
+        },
+        {
+          "id": "10",
+          "question": "Apa huruf Katakana untuk 'weitaa' (waiter)?",
+          "options": ["ウェイター", "ウェター", "ウィーター", "ウエーター"],
+          "answer": "ウェイター"
+        }
+      ]
+    }
+  ]
+}

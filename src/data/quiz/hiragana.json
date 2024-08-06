@@ -1,0 +1,664 @@
+{
+  "levels": [
+    {
+      "level": 1,
+      "questions": [
+        {
+          "id": "1",
+          "question": "Apa bacaan dari huruf ini 'かな'?",
+          "options": ["kana", "kama", "kawa", "kasa"],
+          "answer": "kana"
+        },
+        {
+          "id": "2",
+          "question": "Apa bacaan dari huruf ini 'すし'?",
+          "options": ["sushi", "sashi", "soshi", "shisu"],
+          "answer": "sushi"
+        },
+        {
+          "id": "3",
+          "question": "Apa bacaan dari huruf ini 'ねこ'?",
+          "options": ["neko", "nuko", "noko", "nego"],
+          "answer": "neko"
+        },
+        {
+          "id": "4",
+          "question": "Apa bacaan dari huruf ini 'いぬ'?",
+          "options": ["inu", "imu", "ifu", "imi"],
+          "answer": "inu"
+        },
+        {
+          "id": "5",
+          "question": "Apa bacaan dari huruf ini 'はな'?",
+          "options": ["hana", "hama", "hani", "hami"],
+          "answer": "hana"
+        },
+        {
+          "id": "6",
+          "question": "Apa huruf Hiragana untuk 'tori'?",
+          "options": ["とり", "とら", "たり", "とみ"],
+          "answer": "とり"
+        },
+        {
+          "id": "7",
+          "question": "Apa huruf Hiragana untuk 'kumo'?",
+          "options": ["くも", "くま", "くら", "くう"],
+          "answer": "くも"
+        },
+        {
+          "id": "8",
+          "question": "Apa huruf Hiragana untuk 'mizu'?",
+          "options": ["みず", "みし", "むず", "みせ"],
+          "answer": "みず"
+        },
+        {
+          "id": "9",
+          "question": "Apa huruf Hiragana untuk 'yama'?",
+          "options": ["やま", "やな", "やも", "やさ"],
+          "answer": "やま"
+        },
+        {
+          "id": "10",
+          "question": "Apa huruf Hiragana untuk 'kaze'?",
+          "options": ["かぜ", "かせ", "かね", "かぬ"],
+          "answer": "かぜ"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "questions": [
+        {
+          "id": "1",
+          "question": "Apa bacaan dari huruf ini 'にほん'?",
+          "options": ["nihon", "nihin", "nihun", "nehon"],
+          "answer": "nihon"
+        },
+        {
+          "id": "2",
+          "question": "Apa bacaan dari huruf ini 'つき'?",
+          "options": ["tsuki", "tsugi", "sushi", "tsumi"],
+          "answer": "tsuki"
+        },
+        {
+          "id": "3",
+          "question": "Apa bacaan dari huruf ini 'そら'?",
+          "options": ["sora", "sori", "soma", "sota"],
+          "answer": "sora"
+        },
+        {
+          "id": "4",
+          "question": "Apa bacaan dari huruf ini 'かわ'?",
+          "options": ["kawa", "kaya", "kata", "kai"],
+          "answer": "kawa"
+        },
+        {
+          "id": "5",
+          "question": "Apa bacaan dari huruf ini 'もり'?",
+          "options": ["mori", "muri", "mari", "momi"],
+          "answer": "mori"
+        },
+        {
+          "id": "6",
+          "question": "Apa huruf Hiragana untuk 'uma'?",
+          "options": ["うま", "うみ", "うさ", "うた"],
+          "answer": "うま"
+        },
+        {
+          "id": "7",
+          "question": "Apa huruf Hiragana untuk 'hito'?",
+          "options": ["ひと", "ひろ", "ひも", "ひよ"],
+          "answer": "ひと"
+        },
+        {
+          "id": "8",
+          "question": "Apa huruf Hiragana untuk 'tabemono'?",
+          "options": ["たべもの", "ためもの", "たみもの", "たちもの"],
+          "answer": "たべもの"
+        },
+        {
+          "id": "9",
+          "question": "Apa huruf Hiragana untuk 'toki'?",
+          "options": ["とき", "とぎ", "とし", "とち"],
+          "answer": "とき"
+        },
+        {
+          "id": "10",
+          "question": "Apa huruf Hiragana untuk 'mizuumi'?",
+          "options": ["みずうみ", "みずいみ", "みずあみ", "みずえみ"],
+          "answer": "みずうみ"
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "questions": [
+        {
+          "id": "1",
+          "question": "Apa bacaan dari huruf ini 'おかね'?",
+          "options": ["okane", "okana", "okame", "okani"],
+          "answer": "okane"
+        },
+        {
+          "id": "2",
+          "question": "Apa bacaan dari huruf ini 'さかな'?",
+          "options": ["sakana", "sakuna", "sakura", "sakina"],
+          "answer": "sakana"
+        },
+        {
+          "id": "3",
+          "question": "Apa bacaan dari huruf ini 'せんせい'?",
+          "options": ["sensei", "sensai", "senshi", "sense"],
+          "answer": "sensei"
+        },
+        {
+          "id": "4",
+          "question": "Apa bacaan dari huruf ini 'きょうしつ'?",
+          "options": ["kyoushitsu", "kyoushita", "kyoushito", "kyoushiku"],
+          "answer": "kyoushitsu"
+        },
+        {
+          "id": "5",
+          "question": "Apa bacaan dari huruf ini 'ともだち'?",
+          "options": ["tomodachi", "tomodati", "tomotachi", "tamodachi"],
+          "answer": "tomodachi"
+        },
+        {
+          "id": "6",
+          "question": "Apa huruf Hiragana untuk 'yama'?",
+          "options": ["やま", "やな", "やも", "やさ"],
+          "answer": "やま"
+        },
+        {
+          "id": "7",
+          "question": "Apa huruf Hiragana untuk 'kawa'?",
+          "options": ["かわ", "かば", "かま", "かな"],
+          "answer": "かわ"
+        },
+        {
+          "id": "8",
+          "question": "Apa huruf Hiragana untuk 'mizu'?",
+          "options": ["みず", "みす", "みつ", "みじ"],
+          "answer": "みず"
+        },
+        {
+          "id": "9",
+          "question": "Apa huruf Hiragana untuk 'hana'?",
+          "options": ["はな", "はね", "はに", "はま"],
+          "answer": "はな"
+        },
+        {
+          "id": "10",
+          "question": "Apa huruf Hiragana untuk 'kumo'?",
+          "options": ["くも", "くま", "くに", "くの"],
+          "answer": "くも"
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "questions": [
+        {
+          "id": "1",
+          "question": "Apa bacaan dari huruf ini 'ねくたい'?",
+          "options": ["nekutai", "nekuta", "nekutau", "nekute"],
+          "answer": "nekutai"
+        },
+        {
+          "id": "2",
+          "question": "Apa bacaan dari huruf ini 'でんわ'?",
+          "options": ["denwa", "denha", "denwa", "denoa"],
+          "answer": "denwa"
+        },
+        {
+          "id": "3",
+          "question": "Apa bacaan dari huruf ini 'くるま'?",
+          "options": ["kuruma", "kuruna", "kurama", "kuuma"],
+          "answer": "kuruma"
+        },
+        {
+          "id": "4",
+          "question": "Apa bacaan dari huruf ini 'がっこう'?",
+          "options": ["gakkou", "gakko", "gakou", "gako"],
+          "answer": "gakkou"
+        },
+        {
+          "id": "5",
+          "question": "Apa bacaan dari huruf ini 'ありがとう'?",
+          "options": ["arigatou", "arikato", "arigato", "arikatou"],
+          "answer": "arigatou"
+        },
+        {
+          "id": "6",
+          "question": "Apa huruf Hiragana untuk 'heya'?",
+          "options": ["へや", "へい", "へま", "へさ"],
+          "answer": "へや"
+        },
+        {
+          "id": "7",
+          "question": "Apa huruf Hiragana untuk 'kowai'?",
+          "options": ["こわい", "こいわ", "こわえ", "こわお"],
+          "answer": "こわい"
+        },
+        {
+          "id": "8",
+          "question": "Apa huruf Hiragana untuk 'omoshiroi'?",
+          "options": ["おもしろい", "おもいしろ", "おもしろえ", "おもしらい"],
+          "answer": "おもしろい"
+        },
+        {
+          "id": "9",
+          "question": "Apa huruf Hiragana untuk 'genki'?",
+          "options": ["げんき", "げんけ", "げんい", "げんか"],
+          "answer": "げんき"
+        },
+        {
+          "id": "10",
+          "question": "Apa huruf Hiragana untuk 'hajimemashite'?",
+          "options": [
+            "はじめまして",
+            "はじめまし",
+            "はじめまて",
+            "はじめましつ"
+          ],
+          "answer": "はじめまして"
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "questions": [
+        {
+          "id": "1",
+          "question": "Apa bacaan dari huruf ini 'うし'?",
+          "options": ["ushi", "ura", "uta", "uma"],
+          "answer": "ushi"
+        },
+        {
+          "id": "2",
+          "question": "Apa bacaan dari huruf ini 'はたけ'?",
+          "options": ["hatake", "hakake", "hataka", "hatate"],
+          "answer": "hatake"
+        },
+        {
+          "id": "3",
+          "question": "Apa bacaan dari huruf ini 'むし'?",
+          "options": ["mushi", "musu", "mashi", "musi"],
+          "answer": "mushi"
+        },
+        {
+          "id": "4",
+          "question": "Apa bacaan dari huruf ini 'きせつ'?",
+          "options": ["kisetsu", "kisesu", "kisestu", "kisechu"],
+          "answer": "kisetsu"
+        },
+        {
+          "id": "5",
+          "question": "Apa bacaan dari huruf ini 'ふゆ'?",
+          "options": ["fuyu", "fuka", "fuya", "furu"],
+          "answer": "fuyu"
+        },
+        {
+          "id": "6",
+          "question": "Apa huruf Hiragana untuk 'hoshi'?",
+          "options": ["ほし", "はし", "ほい", "ほさ"],
+          "answer": "ほし"
+        },
+        {
+          "id": "7",
+          "question": "Apa huruf Hiragana untuk 'kiku'?",
+          "options": ["きく", "きか", "きき", "きさ"],
+          "answer": "きく"
+        },
+        {
+          "id": "8",
+          "question": "Apa huruf Hiragana untuk 'ame'?",
+          "options": ["あめ", "あま", "あこ", "あけ"],
+          "answer": "あめ"
+        },
+        {
+          "id": "9",
+          "question": "Apa huruf Hiragana untuk 'natsu'?",
+          "options": ["なつ", "なさ", "なた", "なつう"],
+          "answer": "なつ"
+        },
+        {
+          "id": "10",
+          "question": "Apa huruf Hiragana untuk 'sakura'?",
+          "options": ["さくら", "さくり", "さけら", "さくま"],
+          "answer": "さくら"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "questions": [
+        {
+          "id": "1",
+          "question": "Apa bacaan dari huruf ini 'ひる'?",
+          "options": ["hiru", "haru", "horo", "hori"],
+          "answer": "hiru"
+        },
+        {
+          "id": "2",
+          "question": "Apa bacaan dari huruf ini 'おちゃ'?",
+          "options": ["ocha", "ochae", "oche", "ochi"],
+          "answer": "ocha"
+        },
+        {
+          "id": "3",
+          "question": "Apa bacaan dari huruf ini 'たまご'?",
+          "options": ["tamago", "tamako", "tanago", "tamogi"],
+          "answer": "tamago"
+        },
+        {
+          "id": "4",
+          "question": "Apa bacaan dari huruf ini 'くすり'?",
+          "options": ["kusuri", "kusari", "kusaru", "kusura"],
+          "answer": "kusuri"
+        },
+        {
+          "id": "5",
+          "question": "Apa bacaan dari huruf ini 'じてんしゃ'?",
+          "options": ["jitensha", "jitesha", "jitenshiya", "jitenshu"],
+          "answer": "jitensha"
+        },
+        {
+          "id": "6",
+          "question": "Apa huruf Hiragana untuk 'asa'?",
+          "options": ["あさ", "あた", "あか", "あま"],
+          "answer": "あさ"
+        },
+        {
+          "id": "7",
+          "question": "Apa huruf Hiragana untuk 'shiro'?",
+          "options": ["しろ", "しる", "しも", "しよ"],
+          "answer": "しろ"
+        },
+        {
+          "id": "8",
+          "question": "Apa huruf Hiragana untuk 'kinou'?",
+          "options": ["きのう", "きのえ", "きにゅう", "きよう"],
+          "answer": "きのう"
+        },
+        {
+          "id": "9",
+          "question": "Apa huruf Hiragana untuk 'ryokou'?",
+          "options": ["りょこう", "りょくう", "りょうこ", "りゅこう"],
+          "answer": "りょこう"
+        },
+        {
+          "id": "10",
+          "question": "Apa huruf Hiragana untuk 'yuugata'?",
+          "options": ["ゆうがた", "ゆがた", "ゆうかた", "ゆかた"],
+          "answer": "ゆうがた"
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "questions": [
+        {
+          "id": "1",
+          "question": "Apa bacaan dari huruf ini 'つくえ'?",
+          "options": ["tsukue", "tsuke", "tsukae", "tsukei"],
+          "answer": "tsukue"
+        },
+        {
+          "id": "2",
+          "question": "Apa bacaan dari huruf ini 'えんぴつ'?",
+          "options": ["enpitsu", "empitsu", "enpichi", "empichi"],
+          "answer": "enpitsu"
+        },
+        {
+          "id": "3",
+          "question": "Apa bacaan dari huruf ini 'おさら'?",
+          "options": ["osara", "osera", "osata", "osaka"],
+          "answer": "osara"
+        },
+        {
+          "id": "4",
+          "question": "Apa bacaan dari huruf ini 'ぶどう'?",
+          "options": ["budou", "budo", "budon", "budoku"],
+          "answer": "budou"
+        },
+        {
+          "id": "5",
+          "question": "Apa bacaan dari huruf ini 'こども'?",
+          "options": ["kodomo", "kodame", "kodoma", "kodami"],
+          "answer": "kodomo"
+        },
+        {
+          "id": "6",
+          "question": "Apa huruf Hiragana untuk 'takai'?",
+          "options": ["たかい", "たかう", "たけい", "たか"],
+          "answer": "たかい"
+        },
+        {
+          "id": "7",
+          "question": "Apa huruf Hiragana untuk 'tanoshii'?",
+          "options": ["たのしい", "たぬしい", "たのし", "たのしー"],
+          "answer": "たのしい"
+        },
+        {
+          "id": "8",
+          "question": "Apa huruf Hiragana untuk 'chichi'?",
+          "options": ["ちち", "ちちち", "ちし", "ちき"],
+          "answer": "ちち"
+        },
+        {
+          "id": "9",
+          "question": "Apa huruf Hiragana untuk 'kirei'?",
+          "options": ["きれい", "きれ", "きねい", "きれー"],
+          "answer": "きれい"
+        },
+        {
+          "id": "10",
+          "question": "Apa huruf Hiragana untuk 'takusan'?",
+          "options": ["たくさん", "たくさい", "たくしゃ", "たくさ"],
+          "answer": "たくさん"
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "questions": [
+        {
+          "id": "1",
+          "question": "Apa bacaan dari huruf ini 'ひこうき'?",
+          "options": ["hikouki", "hikuki", "hikoki", "hikuke"],
+          "answer": "hikouki"
+        },
+        {
+          "id": "2",
+          "question": "Apa bacaan dari huruf ini 'いちご'?",
+          "options": ["ichigo", "ichigi", "ichiko", "ichigu"],
+          "answer": "ichigo"
+        },
+        {
+          "id": "3",
+          "question": "Apa bacaan dari huruf ini 'たんじょうび'?",
+          "options": ["tanjoubi", "tanjyoubi", "tanjoube", "tanjouba"],
+          "answer": "tanjoubi"
+        },
+        {
+          "id": "4",
+          "question": "Apa bacaan dari huruf ini 'がんばる'?",
+          "options": ["ganbaru", "ganbero", "ganbiro", "ganbaro"],
+          "answer": "ganbaru"
+        },
+        {
+          "id": "5",
+          "question": "Apa bacaan dari huruf ini 'たべもの'?",
+          "options": ["tabemono", "tabemino", "tabemoto", "tabemina"],
+          "answer": "tabemono"
+        },
+        {
+          "id": "6",
+          "question": "Apa huruf Hiragana untuk 'tanomu'?",
+          "options": ["たのむ", "たのま", "たぬむ", "たのい"],
+          "answer": "たのむ"
+        },
+        {
+          "id": "7",
+          "question": "Apa huruf Hiragana untuk 'kanashii'?",
+          "options": ["かなしい", "かなち", "かなし", "かなす"],
+          "answer": "かなしい"
+        },
+        {
+          "id": "8",
+          "question": "Apa huruf Hiragana untuk 'nihon'?",
+          "options": ["にほん", "にしん", "にほい", "におん"],
+          "answer": "にほん"
+        },
+        {
+          "id": "9",
+          "question": "Apa huruf Hiragana untuk 'koucha'?",
+          "options": ["こうちゃ", "こーちゃ", "こいちゃ", "こちや"],
+          "answer": "こうちゃ"
+        },
+        {
+          "id": "10",
+          "question": "Apa huruf Hiragana untuk 'yukkuri'?",
+          "options": ["ゆっくり", "ゆくり", "ゆっきり", "ゆうくり"],
+          "answer": "ゆっくり"
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "questions": [
+        {
+          "id": "1",
+          "question": "Apa bacaan dari huruf ini 'みずうみ'?",
+          "options": ["mizuumi", "mizumi", "mijumi", "mizomi"],
+          "answer": "mizuumi"
+        },
+        {
+          "id": "2",
+          "question": "Apa bacaan dari huruf ini 'ちゅうしゃじょう'?",
+          "options": ["chuushajou", "chuushajyou", "chuushaajou", "chuushijou"],
+          "answer": "chuushajou"
+        },
+        {
+          "id": "3",
+          "question": "Apa bacaan dari huruf ini 'ほんや'?",
+          "options": ["honya", "honjya", "honha", "honaya"],
+          "answer": "honya"
+        },
+        {
+          "id": "4",
+          "question": "Apa bacaan dari huruf ini 'せかい'?",
+          "options": ["sekai", "sekaya", "sekae", "sekaki"],
+          "answer": "sekai"
+        },
+        {
+          "id": "5",
+          "question": "Apa bacaan dari huruf ini 'あかちゃん'?",
+          "options": ["akachan", "akaichan", "akachian", "akaachan"],
+          "answer": "akachan"
+        },
+        {
+          "id": "6",
+          "question": "Apa huruf Hiragana untuk 'kanousei'?",
+          "options": ["かのうせい", "かのおせい", "かなうせい", "かのせい"],
+          "answer": "かのうせい"
+        },
+        {
+          "id": "7",
+          "question": "Apa huruf Hiragana untuk 'tasogare'?",
+          "options": ["たそがれ", "たそがり", "たそがろ", "たしがれ"],
+          "answer": "たそがれ"
+        },
+        {
+          "id": "8",
+          "question": "Apa huruf Hiragana untuk 'kousoku'?",
+          "options": ["こうそく", "こおそく", "こそく", "こうそう"],
+          "answer": "こうそく"
+        },
+        {
+          "id": "9",
+          "question": "Apa huruf Hiragana untuk 'gekijou'?",
+          "options": ["げきじょう", "げきじよ", "げっきじょう", "げきじょ"],
+          "answer": "げきじょう"
+        },
+        {
+          "id": "10",
+          "question": "Apa huruf Hiragana untuk 'kireina'?",
+          "options": ["きれいな", "きれな", "きれーな", "きれい"],
+          "answer": "きれいな"
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "questions": [
+        {
+          "id": "1",
+          "question": "Apa bacaan dari huruf ini 'つみき'?",
+          "options": ["tsumiki", "tsumaku", "tsumikki", "tsumiku"],
+          "answer": "tsumiki"
+        },
+        {
+          "id": "2",
+          "question": "Apa bacaan dari huruf ini 'てつがく'?",
+          "options": ["tetsugaku", "tetsukaku", "tetusgaku", "tetsuko"],
+          "answer": "tetsugaku"
+        },
+        {
+          "id": "3",
+          "question": "Apa bacaan dari huruf ini 'りゅうがくせい'?",
+          "options": ["ryuugakusei", "ryugakusei", "ryuugaksei", "ryugakse"],
+          "answer": "ryuugakusei"
+        },
+        {
+          "id": "4",
+          "question": "Apa bacaan dari huruf ini 'きぼう'?",
+          "options": ["kibou", "kibo", "kibau", "kibu"],
+          "answer": "kibou"
+        },
+        {
+          "id": "5",
+          "question": "Apa bacaan dari huruf ini 'やおや'?",
+          "options": ["yaoya", "yaoaya", "yaoa", "yaaya"],
+          "answer": "yaoya"
+        },
+        {
+          "id": "6",
+          "question": "Apa huruf Hiragana untuk 'tanuki'?",
+          "options": ["たぬき", "たぬけ", "たぬか", "たぬえ"],
+          "answer": "たぬき"
+        },
+        {
+          "id": "7",
+          "question": "Apa huruf Hiragana untuk 'yukata'?",
+          "options": ["ゆかた", "ゆたか", "ゆかだ", "ゆかさ"],
+          "answer": "ゆかた"
+        },
+        {
+          "id": "8",
+          "question": "Apa huruf Hiragana untuk 'sekaijuu'?",
+          "options": [
+            "せかいじゅう",
+            "せかいじう",
+            "せかいじゆう",
+            "せかいじゅ"
+          ],
+          "answer": "せかいじゅう"
+        },
+        {
+          "id": "9",
+          "question": "Apa huruf Hiragana untuk 'jishin'?",
+          "options": ["じしん", "じじん", "じしみ", "じしに"],
+          "answer": "じしん"
+        },
+        {
+          "id": "10",
+          "question": "Apa huruf Hiragana untuk 'kanpeki'?",
+          "options": ["かんぺき", "かんへき", "かんぺけ", "かんへけ"],
+          "answer": "かんぺき"
+        }
+      ]
+    }
+  ]
+}
