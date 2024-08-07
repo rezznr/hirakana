@@ -1,14 +1,14 @@
-import { menuBelajar, menuLatihan } from "@assets/img/index";
+import { hiragana, katakana } from "@assets/img/index";
 
 export const menu = [
   {
     name: "Hiragana",
-    icon: menuBelajar,
+    icon: hiragana,
     link: "/belajar/hiragana",
   },
   {
     name: "Katakana",
-    icon: menuLatihan,
+    icon: katakana,
     link: "/belajar/katakana",
   },
 ];

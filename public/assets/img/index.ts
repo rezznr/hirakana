@@ -11,6 +11,8 @@ import logoKanjiMid from "./kanji-mid.png";
 import lamp1 from "./lamp-1.png";
 import lamp2 from "./lamp-2.png";
 import lamp3 from "./lamp-3.png";
+import hiragana from "./hiragana.png";
+import katakana from "./katakana.png";
 
 export {
   kanjiRight,
@@ -26,4 +28,6 @@ export {
   lamp1,
   lamp2,
   lamp3,
+  hiragana,
+  katakana,
 };
