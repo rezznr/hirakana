@@ -125,7 +125,7 @@ const Level: React.FC<LevelProps> = ({ level, questions, onComplete, url }) => {
           )}
         </>
       )}
-      <div className="fixed group bottom-6 md:bottom-24">
+      <div className="fixed group bottom-[5%]">
         <button
           className="flex items-center bg-[#F94C76]/30 rounded-xl hover:bg-[#F94C76]/50 hover:scale-105 active:scale-100 transform transition duration-300 py-5 px-4 font-extrabold font-poppins"
           onClick={handleButtonClick}
