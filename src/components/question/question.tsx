@@ -44,7 +44,7 @@ const Question: React.FC<QuestionProps> = ({
           const isSelected = selectedOption === option;
           const isCorrect = option === answer;
           let buttonClass =
-            "p-5 rounded-xl uppercase font-extrabold transform transition duration-300 ";
+            "p-5 rounded-xl uppercase font-extrabold transform transition duration-300 md:text-xl ";
 
           if (isSelected) {
             buttonClass += isCorrect

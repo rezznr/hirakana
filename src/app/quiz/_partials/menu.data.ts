@@ -4,11 +4,11 @@ export const menu = [
   {
     name: "Hiragana",
     icon: hiragana,
-    link: "/belajar/hiragana",
+    link: "/quiz/hiragana",
   },
   {
     name: "Katakana",
     icon: katakana,
-    link: "/belajar/katakana",
+    link: "/quiz/katakana",
   },
 ];
