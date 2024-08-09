@@ -242,7 +242,7 @@ const TableHiragana: React.FC<TableHiraganaProps> = ({ data, isYoon }) => {
             {headers.map((header, index) => (
               <th
                 key={index}
-                className="bg-red-300 p-2 text-black text-xl font-bold md:border md:border-red-300 block md:table-cell"
+                className="bg-red-300 p-2 text-black text-xl font-bold md:border md:border-red-300 hidden md:table-cell"
               >
                 {header.toUpperCase()}
               </th>
