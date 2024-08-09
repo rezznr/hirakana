@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
+import { SakuraAnimation } from "@/components/sakura/sakuraAnimation";
+import AutoPlayAudio from "@/components/audioPlay/audioPlay";
 // import { GlobalStateProvider } from "./globalStateContext";
 
 const poppins = Poppins({ weight: ["300", "400"], subsets: ["latin"] });
@@ -22,6 +24,8 @@ export default function RootLayout({
       {/* <GlobalStateProvider> */}
       <body className={poppins.className}>
         <Navbar />
+        <AutoPlayAudio />
+        <SakuraAnimation />
         <div className="flex items-center justify-center pb-10">{children}</div>
       </body>
       {/* </GlobalStateProvider> */}
