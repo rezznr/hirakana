@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 import { SakuraAnimation } from "@/components/sakura/sakuraAnimation";
 import AutoPlayAudio from "@/components/audioPlay/audioPlay";
+import { Component } from "@/components/component/component";
 // import { GlobalStateProvider } from "./globalStateContext";
 
 const poppins = Poppins({ weight: ["300", "400"], subsets: ["latin"] });
@@ -24,6 +25,7 @@ export default function RootLayout({
       {/* <GlobalStateProvider> */}
       <body className={poppins.className}>
         <Navbar />
+        <Component />
         <AutoPlayAudio />
         <SakuraAnimation />
         <div className="flex items-center justify-center pb-10">{children}</div>
