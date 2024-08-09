@@ -1,15 +1,12 @@
 "use client";
 
 import { useEffect } from "react";
-// import { music } from "@assets/audio/music.mp3";
 
 const AutoPlayAudio = () => {
   useEffect(() => {
     const audio = new Audio("/assets/audio/music.mp3");
     audio.loop = true;
-    audio.autoplay = true;
 
-    // Attempt to play audio when the page is interacted with (helps with autoplay policies)
     const playAudio = async () => {
       try {
         await audio.play();
@@ -18,15 +15,17 @@ const AutoPlayAudio = () => {
       }
     };
 
-    // Listen for user interaction
-    document.addEventListener("click", playAudio, { once: true });
-
-    // Attempt to auto-play immediately (some browsers may allow this)
+    // Attempt to auto-play immediately
     playAudio();
 
-    // Clean up event listener when the component is unmounted
+    // Fallback for user interaction if autoplay is prevented
+    document.addEventListener("click", playAudio, { once: true });
+    document.addEventListener("keydown", playAudio, { once: true });
+
+    // Clean up event listeners and audio element when the component is unmounted
     return () => {
       document.removeEventListener("click", playAudio);
+      document.removeEventListener("keydown", playAudio);
       audio.pause();
       audio.src = "";
     };
