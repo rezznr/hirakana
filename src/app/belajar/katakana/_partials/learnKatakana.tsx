@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { KatakanaData, KatakanaRow } from "@/types/katakanaLearn.data";
 import katakanaDataJson from "./katakana.json";
 import Loading from "@/app/loading";
+import Link from "next/link";
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 const LearnKatakana = () => {
   const [katakanaData, setKatakanaData] = useState<KatakanaData | null>(null);
@@ -16,7 +18,14 @@ const LearnKatakana = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-red-100 to-red-200 py-10">
+    <div className="min-h-screen bg-gradient-to-b from-red-100 to-red-200 pb-10">
+      <Link
+        className="flex justify-start items-center hover:underline text-red-500 text-lg mb-4"
+        href={"/belajar"}
+      >
+        <IoMdArrowRoundBack className="text-2xl" />
+        <p className="text-xl">Back</p>
+      </Link>
       <div className="bg-white shadow-lg max-w-4xl mx-auto p-8 rounded-lg">
         <h1 className="font-bold mb-4 text-center text-2xl md:text-4xl text-red-500">
           Belajar Katakana
@@ -156,6 +165,28 @@ const LearnKatakana = () => {
             <li>スキー (sukii, ski)</li>
             <li>テニス (tenisu, tenis)</li>
           </ul>
+        </div>
+        <div className="mt-12">
+          <h2 className="font-bold text-2xl text-red-500 mb-6 text-center">
+            Lanjutkan Pembelajaran
+          </h2>
+          <div className="flex justify-center space-x-4">
+            <Link href="/belajar/hiragana">
+              <p className="bg-blue-300 hover:bg-blue-500 text-white py-2 px-4 rounded-lg text-lg transition-colors">
+                Belajar Hiragana
+              </p>
+            </Link>
+            <Link href="/latihan">
+              <p className="bg-green-300 hover:bg-green-500 text-white py-2 px-4 rounded-lg text-lg transition-colors">
+                Latihan
+              </p>
+            </Link>
+            <Link href="/quiz">
+              <p className="bg-red-300 hover:bg-red-500 text-white py-2 px-4 rounded-lg text-lg transition-colors">
+                Ikuti Kuis
+              </p>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

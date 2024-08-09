@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { HiraganaData, HiraganaRow } from "@/types/hiraganaLearn.data";
 import hiraganaDataJson from "./hiragana.json";
 import Loading from "@/app/loading";
+import Link from "next/link";
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 const LearnHiragana = () => {
   const [hiraganaData, setHiraganaData] = useState<HiraganaData | null>(null);
@@ -16,15 +18,24 @@ const LearnHiragana = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-red-100 to-red-200 py-10">
+    <div className="min-h-screen bg-gradient-to-b from-red-100 to-red-200 pb-10">
+      <Link
+        className="flex justify-start items-center hover:underline text-red-500 text-lg mb-4"
+        href={"/belajar"}
+      >
+        <IoMdArrowRoundBack className="text-2xl" />
+        <p className="text-xl">Back</p>
+      </Link>
       <div className="bg-white shadow-lg max-w-4xl mx-auto p-8 rounded-lg">
         <h1 className="font-bold mb-4 text-center text-2xl md:text-4xl text-red-500">
           Belajar Hiragana
         </h1>
         <p className="mb-8 text-xl text-center text-gray-700">
           Hiragana adalah salah satu dari tiga sistem penulisan utama dalam
-          bahasa Jepang. Pelajari huruf-huruf Hiragana dengan tabel di bawah
-          ini.
+          bahasa Jepang, digunakan untuk menulis kata-kata asli Jepang,
+          partikel, dan akhiran kata kerja serta kata sifat. Pelajari
+          huruf-huruf Hiragana dan cara penggunaannya dalam bahasa sehari-hari
+          dengan tabel dan contoh di bawah ini.
         </p>
 
         <div className="mb-8">
@@ -32,6 +43,36 @@ const LearnHiragana = () => {
             Tabel Huruf Hiragana Dasar
           </h2>
           <TableHiragana data={hiraganaData.hiragana} />
+          <p className="text-gray-700 text-lg mt-4">
+            Hiragana dasar terdiri dari 46 karakter yang masing-masing mewakili
+            bunyi suku kata. Berikut adalah beberapa tips untuk menguasai
+            hiragana:
+          </p>
+          <ul className="list-disc list-inside text-gray-700 text-lg ml-4">
+            <li>Perhatikan urutan goresan saat menulis hiragana.</li>
+            <li>Latih pengucapan setiap karakter dengan suara keras.</li>
+            <li>
+              Uji pemahaman Anda dengan mengikuti{" "}
+              <Link
+                href="/quiz"
+                className="text-blue-600 hover:text-blue-900 font-semibold underline"
+              >
+                kuis interaktif
+              </Link>{" "}
+              dan tingkatkan kemampuan Anda!
+            </li>
+            <li>
+              Latih kemampuan membaca huruf hiragana{" "}
+              <Link
+                className="text-blue-600 hover:text-blue-900 font-semibold underline"
+                href={"/latihan"}
+              >
+                disini
+              </Link>
+              .
+            </li>
+            <li>Gunakan flashcard untuk mengingat bentuk dan bunyi.</li>
+          </ul>
         </div>
 
         <div className="mb-8">
@@ -149,6 +190,28 @@ const LearnHiragana = () => {
             <li>すみません (sumimasen, maaf atau permisi)</li>
             <li>ありがとう (arigatou, terima kasih)</li>
           </ul>
+        </div>
+        <div className="mt-12">
+          <h2 className="font-bold text-2xl text-red-500 mb-6 text-center">
+            Lanjutkan Pembelajaran
+          </h2>
+          <div className="flex justify-center space-x-4">
+            <Link href="/belajar/katakana">
+              <p className="bg-blue-300 hover:bg-blue-500 text-white py-2 px-4 rounded-lg text-lg transition-colors">
+                Belajar Katakana
+              </p>
+            </Link>
+            <Link href="/latihan">
+              <p className="bg-green-300 hover:bg-green-500 text-white py-2 px-4 rounded-lg text-lg transition-colors">
+                Latihan
+              </p>
+            </Link>
+            <Link href="/quiz">
+              <p className="bg-red-300 hover:bg-red-500 text-white py-2 px-4 rounded-lg text-lg transition-colors">
+                Ikuti Kuis
+              </p>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
