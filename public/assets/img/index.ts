@@ -3,6 +3,7 @@ import gerbang from "./gerbang.png";
 import rantingKiri from "./ranting-kiri.png";
 import rantingKanan from "./ranting-sakura-kanan.png";
 import orang1 from "./orang-1.png";
+import orang2 from "./orang-2.png";
 import menuBelajar from "./menu-belajar.png";
 import menuLatihan from "./menu-latihan.png";
 import menuQuiz from "./menu-quiz.png";
@@ -20,6 +21,7 @@ export {
   rantingKiri,
   rantingKanan,
   orang1,
+  orang2,
   menuBelajar,
   menuLatihan,
   menuQuiz,
