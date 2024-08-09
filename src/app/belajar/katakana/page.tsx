@@ -1,14 +1,13 @@
 import { LearnKatakana } from "./_partials/learnKatakana";
 
 export const metadata = {
-  title: "Katakana | Belajar",
+  title: "Belajar | Katakana",
   description: "Belajar huruf Katakana",
 };
 
 function Page() {
   return (
     <div>
-      <p>{`< back`}</p>
       <LearnKatakana />
     </div>
   );

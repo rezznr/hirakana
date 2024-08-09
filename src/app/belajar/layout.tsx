@@ -1,7 +1,7 @@
 import React from "react";
 
 export const metadata = {
-  title: "Hirakana | Latihan",
+  title: "Hirakana | Belajar",
 };
 
 function Layout({

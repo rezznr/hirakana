@@ -1,7 +1,7 @@
 import { LearnHiragana } from "./partials/learnHiragana";
 
 export const metadata = {
-  title: "Hiragana | Belajar",
+  title: "Belajar | Hiragana",
   description: "Belajar huruf Hiragana",
 };
 
