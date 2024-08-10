@@ -17,6 +17,29 @@ interface LevelData {
   questions: QuestionData[];
 }
 
+// Linear Congruential Generator Function
+function linearCongruentialGenerator(seed: number) {
+  const a = 1664525;
+  const c = 1013904223;
+  const m = 2 ** 32;
+  let state = seed;
+
+  return function () {
+    state = (a * state + c) % m;
+    return state / m;
+  };
+}
+
+// Shuffle Array Function
+function shuffleArray<T>(array: T[], rng: () => number): T[] {
+  const shuffledArray = [...array]; // Copy the array to avoid mutating the original array
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+  return shuffledArray;
+}
+
 // Main component
 const LevelPage = ({
   level,
@@ -54,7 +77,14 @@ const LevelPage = ({
       );
 
       if (levelData) {
-        setQuestions(levelData.questions);
+        // Menggunakan LCM untuk mengacak soal berdasarkan id
+        const seed = Date.now(); // Menggunakan waktu saat ini sebagai seed untuk pengacakan
+        const rng = linearCongruentialGenerator(seed);
+        const shuffledQuestions: QuestionData[] = shuffleArray<QuestionData>(
+          levelData.questions,
+          rng
+        );
+        setQuestions(shuffledQuestions); // Assign shuffled questions to state
       } else {
         console.error("Level not found");
       }
@@ -96,7 +126,7 @@ const LevelPage = ({
       return;
     }
 
-    fetchQuestions();
+    fetchQuestions(); // Fetch and shuffle questions each time the component is mounted
   }, [fetchQuestions, checkAccess]);
 
   // Handle level completion

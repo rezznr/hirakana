@@ -1,5 +1,5 @@
 import { apiUrl, localStorage, url } from "../../config";
-import { LevelPage } from "./_partials/levelPage";
+import { LevelPage } from "@/components/levelPage/levelPage";
 
 export async function generateMetadata({ params: { level } }: Params) {
   return {
