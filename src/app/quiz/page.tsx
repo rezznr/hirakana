@@ -1,3 +1,4 @@
+import { BackHomeBtn } from "@/components/backHomeBtn/backHome";
 import MenuLatihan from "./_partials/menu-latihan";
 
 function Page() {
@@ -12,7 +13,7 @@ function Page() {
         </h3>
       </div>
       <MenuLatihan />
-      <div className="flex flex-col gap-4 md:gap-6 lg:gap-8"></div>
+      <BackHomeBtn />
     </div>
   );
 }

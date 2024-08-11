@@ -1,4 +1,5 @@
 import MenuBelajar from "./_partials/menu-belajar";
+import { BackHomeBtn } from "@/components/backHomeBtn/backHome";
 
 function Page() {
   return (
@@ -12,7 +13,7 @@ function Page() {
         </h3>
       </div>
       <MenuBelajar />
-      <div className="flex flex-col gap-4 md:gap-6 lg:gap-8"></div>
+      <BackHomeBtn />
     </div>
   );
 }
