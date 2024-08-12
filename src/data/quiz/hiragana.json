@@ -106,9 +106,9 @@
         },
         {
           "id": "7",
-          "question": "Apa huruf Hiragana untuk 'hito'?",
-          "options": ["ひと", "ひろ", "ひも", "ひよ"],
-          "answer": "ひと"
+          "question": "Apa huruf Hiragana untuk 'hitotsu'?",
+          "options": ["ひとつ", "はろし", "ひもち", "ひより"],
+          "answer": "ひとつ"
         },
         {
           "id": "8",
@@ -165,9 +165,9 @@
         },
         {
           "id": "6",
-          "question": "Apa huruf Hiragana untuk 'yama'?",
-          "options": ["やま", "やな", "やも", "やさ"],
-          "answer": "やま"
+          "question": "Apa huruf Hiragana untuk 'yamada'?",
+          "options": ["やまだ", "やなだ", "やもり", "やさだ"],
+          "answer": "やまだ"
         },
         {
           "id": "7",
@@ -177,21 +177,21 @@
         },
         {
           "id": "8",
-          "question": "Apa huruf Hiragana untuk 'mizu'?",
-          "options": ["みず", "みす", "みつ", "みじ"],
-          "answer": "みず"
+          "question": "Apa huruf Hiragana untuk 'sekai'?",
+          "options": ["せかい", "せけえ", "さけい", "せかえ"],
+          "answer": "せかい"
         },
         {
           "id": "9",
-          "question": "Apa huruf Hiragana untuk 'hana'?",
-          "options": ["はな", "はね", "はに", "はま"],
-          "answer": "はな"
+          "question": "Apa huruf Hiragana untuk 'hanabi'?",
+          "options": ["はなび", "ほなび", "はにび", "まなび"],
+          "answer": "はなび"
         },
         {
           "id": "10",
-          "question": "Apa huruf Hiragana untuk 'kumo'?",
-          "options": ["くも", "くま", "くに", "くの"],
-          "answer": "くも"
+          "question": "Apa huruf Hiragana untuk 'kumori'?",
+          "options": ["くもり", "くまる", "きもり", "くのろ"],
+          "answer": "くもり"
         }
       ]
     },
@@ -507,9 +507,9 @@
         },
         {
           "id": "8",
-          "question": "Apa huruf Hiragana untuk 'nihon'?",
-          "options": ["にほん", "にしん", "にほい", "におん"],
-          "answer": "にほん"
+          "question": "Apa huruf Hiragana untuk 'nihonjin'?",
+          "options": ["にほんじん", "にひんじん", "にほいかん", "におんぎん"],
+          "answer": "にほんじん"
         },
         {
           "id": "9",
