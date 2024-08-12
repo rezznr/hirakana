@@ -8,7 +8,7 @@ export default function Home() {
           Pembelajaran Huruf Bahasa Jepang
         </h2>
         <h3 className="text-black font-extrabold text-xl md:text-2xl lg:text-3xl">
-          Hiragana Dan Katakanaa
+          Hiragana Dan Katakana
         </h3>
       </div>
       <Menu />
