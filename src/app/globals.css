@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 body {
-  /* background: radial-gradient(circle, #ede1d5 28%, #ed7e7e 86%); */
+  background-color: #ffdecf; /* Warna fallback untuk browser yang tidak mendukung gradien */
+
   background-image: url("../../public/assets/img/background.png");
   background-size: cover; /* Scale the background image to be as large as possible */
   background-repeat: no-repeat; /* Prevent the background image from repeating */

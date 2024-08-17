@@ -18,6 +18,7 @@ function Menus({ name, icon, link }: Menu) {
           alt={`${name}-menu`}
           width={150}
           height={150}
+          loading="lazy"
         />
         <p className="text-black text-[22px]">{name}</p>
       </div>
