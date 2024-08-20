@@ -96,7 +96,7 @@ const Level: React.FC<LevelProps> = ({ level, questions, onComplete, url }) => {
     : "bg-gradient-to-b from-[#FFB5B5] to-[#EDE1D5] hover:bg-[#FF9696]/80";
 
   return (
-    <div className="flex flex-col w-[95%] items-center justify-center h-full gap-5 md:w-full">
+    <div className="flex flex-col w-[95%] items-center justify-center h-auto gap-5 md:w-full">
       <div className="font-sans shadow-lg bg-gradient-to-b from-[#FF9696] to-[#FFD3D3] py-5 px-16 flex flex-col items-center rounded-tl-[11px] rounded-tr-[11px]">
         <h2 className="text-3xl text-[#251C1C] font-extrabold ">
           Level {level}
@@ -110,8 +110,10 @@ const Level: React.FC<LevelProps> = ({ level, questions, onComplete, url }) => {
           {currentQuestion < questions.length && (
             <Question
               {...questions[currentQuestion]}
+              questionNumber={currentQuestion + 1}
               onAnswer={handleAnswer}
               reset={resetQuestion}
+              totalQuestions={questions.length}
             />
           )}
           {isAnswered && (
@@ -125,7 +127,7 @@ const Level: React.FC<LevelProps> = ({ level, questions, onComplete, url }) => {
           )}
         </>
       )}
-      <div className="absolute group bottom-[5%]">
+      <div className="mt-28 group">
         <button
           className="flex items-center bg-[#F94C76]/30 rounded-xl hover:bg-[#F94C76]/50 hover:scale-105 active:scale-100 transform transition duration-300 py-5 px-4 font-extrabold font-poppins"
           onClick={handleButtonClick}
