@@ -6,21 +6,21 @@ function Component() {
   return (
     <div>
       <Image
-        className="fixed -z-20 left-[3%] bottom-0 hidden md:block"
+        className="absolute -z-20 left-[3%] w-[25%] bottom-0 hidden lg:block"
         src={gerbang}
         width={300}
         height={300}
         alt=""
       />
       <Image
-        className="fixed -z-10 left-[15%] bottom-0 hidden md:block"
+        className="absolute -z-10 left-[15%] bottom-0 w-[10%] hidden lg:block"
         src={orang2}
         width={120}
         height={120}
         alt=""
       />
       <Image
-        className="fixed -z-10 right-5 bottom-0 hidden md:block"
+        className="absolute -z-10 right-5 bottom-0 w-[10%] hidden lg:block"
         src={orang1}
         width={120}
         alt=""
