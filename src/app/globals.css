@@ -4,33 +4,14 @@
 
 body {
   background-color: #ffdecf; /* Warna fallback untuk browser yang tidak mendukung gradien */
+
   background-image: url("../../public/assets/img/background.png");
-  background-size: cover; /* Skala gambar latar agar sebesar mungkin */
-  background-repeat: no-repeat; /* Mencegah pengulangan gambar latar */
-  background-position: center top; /* Menempatkan gambar di tengah atas */
-  background-attachment: fixed; /* Membuat gambar tetap di tempat saat scrolling */
-  min-height: 100vh; /* Setidaknya tinggi viewport penuh */
-  width: 100%; /* Lebar penuh */
-  margin: 0; /* Menghilangkan margin default */
-  display: flex; /* Menggunakan flexbox untuk tata letak responsif */
-  flex-direction: column; /* Tata letak kolom */
-  align-items: center; /* Pusatkan konten secara horizontal */
-  justify-content: center; /* Pusatkan konten secara vertikal */
-  overflow-x: hidden; /* Mencegah scroll horizontal */
-  transition: background 0.3s ease-in-out; /* Transisi smooth untuk perubahan latar */
-}
-
-/* Media Queries untuk Responsivitas */
-@media (max-width: 768px) {
-  body {
-    background-position: center; /* Penyesuaian untuk layar kecil */
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    background-size: contain; /* Menyesuaikan ukuran gambar untuk perangkat kecil */
-  }
+  background-size: cover; /* Scale the background image to be as large as possible */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: top, center; /* Center the background image */
+  background-attachment: fixed;
+  height: 90vh; /* Full viewport height */
+  width: 100%; /* Full width */
 }
 
 /* For Webkit browsers (Chrome, Safari) */
