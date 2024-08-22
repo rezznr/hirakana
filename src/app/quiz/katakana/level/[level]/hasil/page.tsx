@@ -1,5 +1,5 @@
-import { localStorage, url } from "../../../config";
-import ResultPage from "./_partials/result";
+import { localStorage, pathName, url } from "../../../config";
+import ResultPage from "@/components/result/result";
 
 type Params = {
   params: {
@@ -10,7 +10,12 @@ type Params = {
 function Page({ params: { level } }: Params) {
   return (
     <div>
-      <ResultPage localStorageName={localStorage} url={url} level={level} />
+      <ResultPage
+        localStorageName={localStorage}
+        url={url}
+        level={level}
+        pathName={pathName}
+      />
     </div>
   );
 }

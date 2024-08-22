@@ -5,7 +5,7 @@ import React from "react";
 function Component() {
   return (
     <div>
-      <Image
+      {/* <Image
         className="absolute -z-20 left-[3%] w-[25%] bottom-0 hidden lg:block"
         src={gerbang}
         width={300}
@@ -24,7 +24,7 @@ function Component() {
         src={orang1}
         width={120}
         alt=""
-      />
+      /> */}
       <Image
         className="absolute right-[5%] top-0 w-[9%] block md:hidden"
         src={lamp3}

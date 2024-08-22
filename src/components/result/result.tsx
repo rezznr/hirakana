@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { MdSkipNext, MdOutlineLoop, MdGridOn } from "react-icons/md";
+import { FaBookOpenReader } from "react-icons/fa6";
 import Loading from "@/app/loading";
 
 interface CompletedLevel {
@@ -14,17 +15,19 @@ const ResultPage = ({
   level,
   url,
   localStorageName,
+  pathName,
 }: {
   level: string;
   url: string;
   localStorageName: string;
+  pathName: string;
 }) => {
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
   const [currentLevel, setCurrentLevel] = useState<CompletedLevel | null>(null);
   const router = useRouter();
   let buttonMenu =
-    "flex flex-col items-center gap-2 md:gap-3 bg-[#F94C76]/30 rounded-xl p-3 md:p-5 hover:bg-[#ffb2b2]/40 hover:scale-105 active:scale-100 transform transition duration-300 px-6 md:px-10 font-extrabold font-poppins text-sm md:text-base lg:text-lg";
+    "flex flex-col items-center gap-2 md:gap-3 bg-[#F94C76]/30 rounded-xl p-3 md:p-5 hover:bg-[#ffb2b2]/70 hover:scale-105 active:scale-100 transform transition duration-300 px-6 md:px-10 font-extrabold font-poppins text-sm md:text-base lg:text-lg";
 
   useEffect(() => {
     // Fetch completed levels from localStorage
@@ -44,16 +47,40 @@ const ResultPage = ({
     // Set message based on current level score
     if (currentLevel) {
       if (currentLevel.score === 100) {
-        setMessage("Sempurna! Wow kamu Luar Biasa!");
+        setMessage(
+          "Sempurna! Kamu benar-benar menguasai tantangan ini! Luar biasa!"
+        );
+      } else if (currentLevel.score >= 95) {
+        setMessage(
+          "Luar biasa! Hanya sedikit lagi untuk mencapai kesempurnaan. Tetap pertahankan!"
+        );
       } else if (currentLevel.score >= 90) {
-        setMessage("Luar biasa! Kamu sangat hebat!");
+        setMessage(
+          "Kerja hebat! Prestasi kamu mendekati sempurna. Teruskan semangat ini!"
+        );
+      } else if (currentLevel.score >= 85) {
+        setMessage(
+          "Hebat! Kamu hampir mencapai tingkat tertinggi, sedikit lagi untuk menjadi sempurna!"
+        );
+      } else if (currentLevel.score >= 80) {
+        setMessage(
+          "Kerja yang baik! Kamu telah menunjukkan kemampuan yang kuat. Teruskan kerja kerasmu!"
+        );
+      } else if (currentLevel.score >= 75) {
+        setMessage(
+          "Bagus sekali! Kamu telah menguasai sebagian besar tantangan ini. Tingkatkan sedikit lagi untuk hasil yang lebih baik!"
+        );
       } else if (currentLevel.score >= 70) {
-        setMessage("Bagus sekali! Kamu telah lulus level ini.");
+        setMessage(
+          "Bagus! Kamu telah menyelesaikan level ini dengan baik. Pertahankan momentum ini!"
+        );
       } else {
-        setMessage("Jangan menyerah! Cobalah lagi untuk lulus.");
+        setMessage(
+          `Jangan putus asa! Kamu sudah berusaha dengan baik.\n Pertimbangkan untuk membaca ulang materi ${pathName} agar lebih siap dalam mencoba lagi.`
+        );
       }
     }
-  }, [currentLevel]);
+  }, [currentLevel, pathName]);
 
   const handleRetry = () => {
     // Redirect to the current level for retry
@@ -64,6 +91,10 @@ const ResultPage = ({
   const handleBacktoLevelMenu = () => {
     // Redirect to the level menu
     router.push(url);
+  };
+  const handleReadMenu = () => {
+    // Redirect to the level menu
+    router.push(`/belajar/${pathName.toLocaleLowerCase()}`);
   };
 
   const handleContinue = () => {
@@ -114,11 +145,18 @@ const ResultPage = ({
                 <p className="text-sm md:text-base">Ulangi</p>
               </button>
             </div>
-            {currentLevel.score >= 70 && currentLevel.level !== 10 && (
+            {currentLevel.score >= 70 && currentLevel.level !== 10 ? (
               <div>
                 <button className={buttonMenu} onClick={handleContinue}>
                   <MdSkipNext className="inline-block text-2xl md:text-3xl" />
                   <p className="text-sm md:text-base">Selanjutnya</p>
+                </button>
+              </div>
+            ) : (
+              <div>
+                <button className={buttonMenu} onClick={handleReadMenu}>
+                  <FaBookOpenReader className="inline-block text-2xl md:text-3xl" />
+                  <p className="text-sm md:text-base">Baca</p>
                 </button>
               </div>
             )}
