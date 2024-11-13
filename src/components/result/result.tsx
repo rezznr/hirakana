@@ -26,7 +26,8 @@ const ResultPage = ({
   const [message, setMessage] = useState("");
   const [currentLevel, setCurrentLevel] = useState<CompletedLevel | null>(null);
   const router = useRouter();
-  let buttonMenu =
+
+  const buttonMenu =
     "flex flex-col items-center gap-2 md:gap-3 bg-[#F94C76]/30 rounded-xl p-3 md:p-5 hover:bg-[#ffb2b2]/70 hover:scale-105 active:scale-100 transform transition duration-300 px-6 md:px-10 font-extrabold font-poppins text-sm md:text-base lg:text-lg";
 
   useEffect(() => {
@@ -88,12 +89,14 @@ const ResultPage = ({
       router.push(`${url}/level/${currentLevel.level}`);
     }
   };
+
   const handleBacktoLevelMenu = () => {
     // Redirect to the level menu
     router.push(url);
   };
+
   const handleReadMenu = () => {
-    // Redirect to the level menu
+    // Redirect to the read menu
     router.push(`/belajar/${pathName.toLocaleLowerCase()}`);
   };
 
@@ -112,77 +115,65 @@ const ResultPage = ({
   if (loading) return <Loading />;
 
   return (
-    <div className="flex flex-col items-center justify-center relative font-poppins px-4 md:px-0">
-      <div className="absolute flex items-center justify-center w-[120px] md:w-[141px] h-[54px] bg-[#ffb2b2] rounded-[9px] -top-4 z-10">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-white py-3">
-          Hasil
-        </h2>
-      </div>
+    <div className="flex flex-col items-center justify-center ">
+      <div className="relative bg-[#ff4d4d]/10 shadow-lg rounded-2xl w-full max-w-md md:max-w-2xl p-6 md:p-8 mt-8">
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#ffb2b2] text-white rounded-full w-24 h-24 flex items-center justify-center shadow-lg">
+          <h2 className="text2xl md:text-3xl font-extrabold">Hasil</h2>
+        </div>
 
-      {currentLevel ? (
-        <div className="flex flex-col items-center justify-center gap-5 w-full max-w-[400px] h-[400px] md:max-w-[629px] md:h-[344px] relative bg-[#ff4d4d]/10 rounded-2xl mt-4 p-4">
-          <div className="flex flex-col items-center justify-center gap-3 md:gap-5 max-w-xl">
-            <h2 className="text-xl md:text-2xl font-extrabold text-center">
+        {currentLevel ? (
+          <div className="flex flex-col items-center justify-center mt-16 space-y-4">
+            <h2 className="text-xl md:text-2xl font-extrabold">
               Level {currentLevel.level}
             </h2>
-          </div>
-          <h3 className="text-2xl md:text-3xl font-extrabold">
-            SCORE: {Math.floor(currentLevel.score)}%
-          </h3>
-          <p className="text-xl md:text-2xl text-center font-extrabold">
-            {message}
-          </p>
-          <div className="flex justify-center items-center mt-8 gap-4 md:gap-8">
-            <div>
+            <div className="w-32 h-32 bg-[#ffb2b2]/20 rounded-full flex items-center justify-center shadow-inner">
+              <span className="text-2xl md:text-3xl font-extrabold">
+                {Math.floor(currentLevel.score)}%
+              </span>
+            </div>
+            <p className="text-xl md:text-2xl text-center font-extrabold px-4">
+              {message}
+            </p>
+            <div className="flex flex-wrap justify-center items-center mt-8 gap-4 md:gap-6">
               <button className={buttonMenu} onClick={handleBacktoLevelMenu}>
                 <MdGridOn className="inline-block text-2xl md:text-3xl" />
                 <p className="text-sm md:text-base">Level</p>
               </button>
-            </div>
-            <div>
               <button className={buttonMenu} onClick={handleRetry}>
                 <MdOutlineLoop className="inline-block text-2xl md:text-3xl" />
                 <p className="text-sm md:text-base">Ulangi</p>
               </button>
-            </div>
-            {currentLevel.score >= 70 && currentLevel.level !== 10 ? (
-              <div>
+              {currentLevel.score >= 70 && currentLevel.level !== 10 ? (
                 <button className={buttonMenu} onClick={handleContinue}>
                   <MdSkipNext className="inline-block text-2xl md:text-3xl" />
                   <p className="text-sm md:text-base">Selanjutnya</p>
                 </button>
-              </div>
-            ) : (
-              <div>
+              ) : (
                 <button className={buttonMenu} onClick={handleReadMenu}>
                   <FaBookOpenReader className="inline-block text-2xl md:text-3xl" />
                   <p className="text-sm md:text-base">Baca</p>
                 </button>
-              </div>
-            )}
+              )}
+            </div>
           </div>
-        </div>
-      ) : (
-        <div className="flex flex-col items-center justify-center gap-5 w-full max-w-[400px] h-[400px] md:max-w-[629px] md:h-[344px] relative bg-[#ff4d4d]/10 rounded-2xl mt-4 p-4">
-          <div className="flex flex-col items-center justify-center gap-3 md:gap-5 max-w-xl">
-            <p className="text-xl md:text-2xl font-extrabold text-center">
+        ) : (
+          <div className="flex flex-col items-center justify-center mt-16 space-y-4">
+            <h2 className="text-xl md:text-2xl font-extrabold">
               Level {level} belum diselesaikan atau tidak ditemukan.
-            </p>
+            </h2>
             <p className="text-lg md:text-xl font-bold text-center">
               Selesaikan Level yang tersedia terlebih dahulu
             </p>
-            <div>
-              <button
-                className={`mt-8 ${buttonMenu}`}
-                onClick={handleBacktoLevelMenu}
-              >
-                <MdGridOn className="inline-block text-2xl md:text-3xl" />
-                <p>Level</p>
-              </button>
-            </div>
+            <button
+              className={`${buttonMenu} mt-4`}
+              onClick={handleBacktoLevelMenu}
+            >
+              <MdGridOn className="inline-block text-2xl md:text-3xl" />
+              <p className="text-sm md:text-base">Level</p>
+            </button>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };
