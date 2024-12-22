@@ -139,15 +139,19 @@ const ResultPage = ({
                 <MdGridOn className="inline-block text-2xl md:text-3xl" />
                 <p className="text-sm md:text-base">Level</p>
               </button>
-              <button className={buttonMenu} onClick={handleRetry}>
-                <MdOutlineLoop className="inline-block text-2xl md:text-3xl" />
-                <p className="text-sm md:text-base">Ulangi</p>
-              </button>
-              {currentLevel.score >= 70 && currentLevel.level !== 10 ? (
-                <button className={buttonMenu} onClick={handleContinue}>
-                  <MdSkipNext className="inline-block text-2xl md:text-3xl" />
-                  <p className="text-sm md:text-base">Selanjutnya</p>
-                </button>
+              {currentLevel.score >= 70 ? (
+                <>
+                  <button className={buttonMenu} onClick={handleRetry}>
+                    <MdOutlineLoop className="inline-block text-2xl md:text-3xl" />
+                    <p className="text-sm md:text-base">Ulangi</p>
+                  </button>
+                  {currentLevel.level !== 10 && (
+                    <button className={buttonMenu} onClick={handleContinue}>
+                      <MdSkipNext className="inline-block text-2xl md:text-3xl" />
+                      <p className="text-sm md:text-base">Selanjutnya</p>
+                    </button>
+                  )}
+                </>
               ) : (
                 <button className={buttonMenu} onClick={handleReadMenu}>
                   <FaBookOpenReader className="inline-block text-2xl md:text-3xl" />
