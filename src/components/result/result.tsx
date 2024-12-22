@@ -31,12 +31,10 @@ const ResultPage = ({
     "flex flex-col items-center gap-2 md:gap-3 bg-[#F94C76]/30 rounded-xl p-3 md:p-5 hover:bg-[#ffb2b2]/70 hover:scale-105 active:scale-100 transform transition duration-300 px-6 md:px-10 font-extrabold font-poppins text-sm md:text-base lg:text-lg";
 
   useEffect(() => {
-    // Fetch completed levels from localStorage
     const storedCompletedLevels: CompletedLevel[] = JSON.parse(
       localStorage.getItem(localStorageName) || "[]"
     );
 
-    // Find the completed level using the level parameter from the URL
     const currentLevel = storedCompletedLevels.find(
       (lvl) => lvl.level === parseInt(level)
     );
@@ -45,66 +43,68 @@ const ResultPage = ({
   }, [level, localStorageName]);
 
   useEffect(() => {
-    // Set message based on current level score
     if (currentLevel) {
       if (currentLevel.score === 100) {
         setMessage(
-          "Sempurna! Kamu benar-benar menguasai tantangan ini! Luar biasa!"
+          "Sempurna! 🌟 Kamu telah menguasai materi ini dengan sempurna. Keren sekali!"
         );
       } else if (currentLevel.score >= 95) {
         setMessage(
-          "Luar biasa! Hanya sedikit lagi untuk mencapai kesempurnaan. Tetap pertahankan!"
+          "Luar biasa! ⭐ Tinggal selangkah lagi menuju kesempurnaan. Tetap semangat!"
         );
       } else if (currentLevel.score >= 90) {
         setMessage(
-          "Kerja hebat! Prestasi kamu mendekati sempurna. Teruskan semangat ini!"
+          "Kerja hebat! 🎯 Pemahamanmu sudah sangat baik. Coba lagi untuk hasil yang sempurna!"
         );
       } else if (currentLevel.score >= 85) {
         setMessage(
-          "Hebat! Kamu hampir mencapai tingkat tertinggi, sedikit lagi untuk menjadi sempurna!"
+          "Hebat! 💪 Kamu sudah hampir menguasai semuanya. Sedikit lagi untuk mencapai puncak!"
         );
       } else if (currentLevel.score >= 80) {
         setMessage(
-          "Kerja yang baik! Kamu telah menunjukkan kemampuan yang kuat. Teruskan kerja kerasmu!"
+          "Bagus sekali! 📈 Teruskan semangat belajarmu. Kamu bisa lebih baik lagi!"
         );
       } else if (currentLevel.score >= 75) {
         setMessage(
-          "Bagus sekali! Kamu telah menguasai sebagian besar tantangan ini. Tingkatkan sedikit lagi untuk hasil yang lebih baik!"
+          "Kerja bagus! 👍 Coba pelajari kembali materi yang masih kurang untuk hasil yang lebih baik."
         );
       } else if (currentLevel.score >= 70) {
         setMessage(
-          "Bagus! Kamu telah menyelesaikan level ini dengan baik. Pertahankan momentum ini!"
+          "Cukup baik! 🎯 Kamu sudah di jalur yang benar. Tingkatkan dengan membaca ulang materinya ya!"
+        );
+      } else if (currentLevel.score >= 60) {
+        setMessage(
+          `Semangat! 📚 Sepertinya kamu perlu mengulang beberapa konsep ${pathName}. Yuk baca lagi materinya sebelum mencoba kembali!`
+        );
+      } else if (currentLevel.score >= 50) {
+        setMessage(
+          `Jangan menyerah! 💡 Ada beberapa konsep ${pathName} yang masih perlu dipahami lebih dalam. Mulai dengan membaca materinya lagi ya!`
         );
       } else {
         setMessage(
-          `Jangan putus asa! Kamu sudah berusaha dengan baik.\n Pertimbangkan untuk membaca ulang materi ${pathName} agar lebih siap dalam mencoba lagi.`
+          `Ayo mulai dari awal! 📖 Sebelum mencoba lagi, yuk pahami dulu dasar-dasar ${pathName} dengan membaca materinya. Kamu pasti bisa!`
         );
       }
     }
   }, [currentLevel, pathName]);
 
   const handleRetry = () => {
-    // Redirect to the current level for retry
     if (currentLevel) {
       router.push(`${url}/level/${currentLevel.level}`);
     }
   };
 
   const handleBacktoLevelMenu = () => {
-    // Redirect to the level menu
     router.push(url);
   };
 
   const handleReadMenu = () => {
-    // Redirect to the read menu
     router.push(`/belajar/${pathName.toLocaleLowerCase()}`);
   };
 
   const handleContinue = () => {
-    // Redirect to the next level
     if (currentLevel) {
       if (currentLevel.level === 10) {
-        // If the current level is the last level, redirect to the home page
         router.push(url);
       } else {
         router.push(`${url}/level/${currentLevel.level + 1}`);
@@ -115,7 +115,7 @@ const ResultPage = ({
   if (loading) return <Loading />;
 
   return (
-    <div className="flex flex-col items-center justify-center ">
+    <div className="flex flex-col items-center justify-center">
       <div className="relative bg-[#ff4d4d]/10 shadow-lg rounded-2xl w-full max-w-md md:max-w-2xl p-6 md:p-8 mt-8">
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#ffb2b2] text-white rounded-full w-24 h-24 flex items-center justify-center shadow-lg">
           <h2 className="text2xl md:text-3xl font-extrabold">Hasil</h2>
@@ -151,7 +151,7 @@ const ResultPage = ({
               ) : (
                 <button className={buttonMenu} onClick={handleReadMenu}>
                   <FaBookOpenReader className="inline-block text-2xl md:text-3xl" />
-                  <p className="text-sm md:text-base">Baca</p>
+                  <p className="text-sm md:text-base">Baca Materi</p>
                 </button>
               )}
             </div>
